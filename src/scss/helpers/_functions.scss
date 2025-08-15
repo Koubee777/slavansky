@@ -1,0 +1,8 @@
+
+@function getWithElem($count, $gap) {
+	@return calc(100% / $count - ($gap * ($count - 1) / $count ));
+}
+
+@function rem($px) {
+    @return ($px / 16) +rem;
+}

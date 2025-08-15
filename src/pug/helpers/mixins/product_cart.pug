@@ -1,0 +1,52 @@
+//- Определяем миксин
+mixin productCard(image, image2, image3, image4, badge, art, title, stock, price, oldPrice, discount,wholesalePrice, wholesaleOldPrice)
+    a.product-card(href="#")
+        .swiper.product-card-image_slider(data_tab_sales="")
+            .swiper-wrapper
+                .swiper-slide
+                    img.product-card__image(src=image, alt=title)
+                .swiper-slide
+                    img.product-card__image(src=image2, alt=title)
+                .swiper-slide
+                    img.product-card__image(src=image3, alt=title)
+                .swiper-slide
+                    img.product-card__image(src=image4, alt=title)
+            .swiper-pagination-product-card
+        if badge
+            span.product-card__badge= badge
+        .product-card__info
+            span.product-card__art= art
+            .product-card__title(href="#")= title
+            .product-card__stock В наличии:
+            span= stock
+            .product-card__price
+                span.product-card__price-current #{price} ₽/м²
+                if oldPrice
+                    span.product-card__price-old #{oldPrice} ₽/м²
+                if discount
+            .product-card__price.wholesale_price
+                span.product-card__price-current #{wholesalePrice} ₽/м²
+                if oldPrice
+                    span.product-card__price-old #{wholesaleOldPrice} ₽/м²
+                if discount
+                    span.product-card__discount= discount
+        .product-card__bottom-block
+            .product-card__red_button.red_button(data-incart="") В корзину
+            .product-card__compare_button(data-compare="")
+                img(src="./img/icons/line_desc.svg", alt="")
+            .product-card__like_button(data-like="")
+                img(src="./img/icons/heart_desc.svg", alt="")
+
+
+
+    //- Вызов миксина с параметрами
+//- +productCard(
+//-   "img/stone.jpg", 
+//-   "Хит продаж", 
+//-   "56967", 
+//-   "Керамогранит Barcelona светло-серая 600×600", 
+//-   "150 шт. / 150 м²", 
+//-   "1 723", 
+//-   "2 150", 
+//-   "-20%"
+//- )

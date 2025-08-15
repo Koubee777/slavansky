@@ -1,0 +1,80 @@
+html {
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    margin: 0px;
+    outline: none;
+    list-style: none;
+    transition: 0.05s ease-in-out;
+}
+img {
+    height: max-content;
+}
+input {
+    border: solid 1px #E2DDD9;
+    border-radius: 4px;
+    padding: 15px 16px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 320px;
+	min-height: 100vh;
+}
+
+.main {
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: currentColor;
+    cursor: pointer;
+}
+a:hover {
+    color: #FE0000;
+}
+
+svg {
+    display: block;
+    flex: 0 0 auto;
+    fill: currentColor;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
+    user-select: none;
+}
+li:hover {
+    color: #FE0000;
+}
+input {
+    color: #8A8A8A;
+}
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    &:not([disabled]):hover,
+    &:not([disabled]):focus,
+    &:not([disabled]):active {
+        box-shadow: none;
+        //border: none;
+        //outline: none;
+    }
+}
+

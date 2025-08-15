@@ -1,0 +1,500 @@
+header
+	section.header
+		.social_block
+			.container
+				.social_city 
+					img(src='./img/icons/city.svg')  
+					a.heder_city.modal_call(href="#modal-city" data-city="Краснодар") Краснодар
+				.social_right
+					a(href="tel:+78002500208") 8 800 250 02 08
+					p Пн-Вс: 08:00 - 18:00
+					a( href="./")
+						img(src='./img/icons/whatsapp_icon.svg')  
+					a( href="./")
+						img(src='./img/icons/vk-social-network-logo.svg')  
+					a( href="./")
+						img(src='./img/icons/telegram.svg') 	
+		.container 
+			.header_middle_block
+				img(src='./img/logo_desc.png')
+				.header_mob_phone
+					a(href="tel:+78002500208") 8 800 250 02 08
+					p Пн-Вс: 08:00 - 18:00
+				.header_middle_block_right
+					form.product_search_block
+						input.prouct_seach(type="text" placeholder="Найти товары")
+						button.red_button.prouct_seach_button(type="submit" style="background-image: url('./img/icons/search_desc.svg')") 
+					.header_user_block.gray_button.tooltip(data-user="") Мой профиль
+						img(src='./img/icons/user_desc.svg')
+						ul.tooltip_text
+							li 
+								a(href="") Личный кабинет
+							li 
+								a(href="") Мои заказы
+							li 
+								a(href="") Скачать прайс
+							li 
+								a(href="") Выход
+							
+					.header_user_block.gray_button(data-compare="")
+						img(src='./img/icons/line_desc.svg', alt="")
+					.header_user_block.gray_button(data-like="")
+						img(src='./img/icons/heart_desc.svg', alt="")
+					.header_user_block.gray_button(data-cart="")
+						img(src='./img/icons/cart_desc.svg', alt="")
+		.container
+				nav.header_nav
+					li.red_button.catalog_botton 
+						.catalog_botton_lefl
+							p
+							p
+							p
+							p
+							span
+							span
+						.catalog_botton_right Каталог
+					form.product_search_block.product_search_block_mob
+						input.prouct_seach(type="text" placeholder="Найти товары")
+						button.red_button.prouct_seach_button(type="submit" style="background-image: url('./img/icons/search_desc.svg')") 
+					ul.header_nav_main
+						li 
+							a(href="") Плитка
+						li 
+							a(href="") Керамогранит
+						li 
+							a(href="") Сантехника
+						li 
+							a(href="") Сухие смеси
+						li 	
+							img.nav_img(src='./img/icons/ready_prublms.svg')
+							a(href="") Готовые решения
+						li 
+							img.nav_img(src='./img/icons/sale_tiket.svg')
+							a(href="") Акции
+						li 
+							.nav_link_drop Сотрудничество
+								ul.nav_link_drop_text.tooltip_text
+									li
+										a(href="") Партнерам
+									li 
+										a(href="") Доставка и оплата
+						li 
+							.nav_link_drop Сотрудничество
+								ul.nav_link_drop_text.tooltip_text
+									li
+										a(href="")  О нас
+									li 
+										a(href="") Вакансии
+									li 
+										a(href="") Блог
+									li 
+										a(href="") Контакты
+				.catalog_menu
+					.catalog_left_menu
+						.catalog_menu_item
+							img(src="", alt="")
+							.catalog_menu_item_text(data-catalog-category="1") Плитка
+						.catalog_menu_item
+							img(src="", alt="")
+							.catalog_menu_item_text(data-catalog-category="2") Керамогранит
+						.catalog_menu_item
+							img(src="", alt="")
+							.catalog_menu_item_text(data-catalog-category="3") Сантехника
+						.catalog_menu_item
+							img(src="", alt="")
+							.catalog_menu_item_text(data-catalog-category="4") Сухие смеси
+					.catalog_right_menu(data-catalog-category="2")
+						.catalog_list_title Керамотрант
+						.catalog_main_ul
+								ul
+									li.catalog_min_title
+										a(href="#") 1Помещение
+									li
+										a(href="#") Для кухни
+									li
+										a(href="#") Для ванной
+									li
+										a(href="#") Для улицы
+									li
+										a(href="#") Для гостиной
+									li
+										a(href="#") Для коридора
+									li
+										a(href="#") Для балкона
+								ul
+									li.catalog_min_title
+										a(href="#") Назначение
+									li
+										a(href="#") Для пола
+									li
+										a(href="#") Для стен
+									li
+										a(href="#") Для улицы
+									li
+										a(href="#") Для укладки на землю
+								ul
+									li.catalog_min_title
+										a(href="#") Цвет
+									li
+										a(href="#") Серый
+									li
+										a(href="#") Белый
+									li
+										a(href="#") Бежевый
+									li
+										a(href="#") Коричневый
+									li
+										a(href="#") Черный
+								ul
+									li.catalog_min_title
+										a(href="#") Цвет
+									li
+										a(href="#") Серый
+									li
+										a(href="#") Белый
+									li
+										a(href="#") Бежевый
+									li
+										a(href="#") Коричневый
+									li
+										a(href="#") Черный
+								ul
+									li.catalog_min_title
+										a(href="#") Размер
+									li
+										a(href="#") 30 x 30 см
+									li
+										a(href="#") 45 x 45 см
+									li
+										a(href="#") 60 x 60 см
+									li
+										a(href="#") 60 x 120 см
+									li
+										a(href="#") 120 x 120 см
+									li
+										a(href="#") 120 x 280 см
+								ul
+									li.catalog_min_title
+										a(href="#") Страна
+									li
+										a(href="#") Россия
+									li
+										a(href="#") Испания
+									li
+										a(href="#") Италия
+									li
+										a(href="#") Германия
+									li
+										a(href="#") Турция
+									li
+										a(href="#") Индия
+								ul
+									li.catalog_min_title
+										a(href="#") Стиль
+									li
+										a(href="#") Моноколор
+									li
+										a(href="#") Пэчворк
+									li
+										a(href="#") Лофт
+									li
+										a(href="#") Классический
+									li
+										a(href="#") Современный
+					.catalog_right_menu(data-catalog-category="1")
+						.catalog_list_title Плитка
+						.catalog_main_ul
+								ul
+									li.catalog_min_title
+										a(href="#") 2Помещение
+									li
+										a(href="#") Для кухни
+									li
+										a(href="#") Для ванной
+									li
+										a(href="#") Для улицы
+									li
+										a(href="#") Для гостиной
+									li
+										a(href="#") Для коридора
+									li
+										a(href="#") Для балкона
+								ul
+									li.catalog_min_title
+										a(href="#") Назначение
+									li
+										a(href="#") Для пола
+									li
+										a(href="#") Для стен
+									li
+										a(href="#") Для улицы
+									li
+										a(href="#") Для укладки на землю
+								ul
+									li.catalog_min_title
+										a(href="#") Цвет
+									li
+										a(href="#") Серый
+									li
+										a(href="#") Белый
+									li
+										a(href="#") Бежевый
+									li
+										a(href="#") Коричневый
+									li
+										a(href="#") Черный
+								ul
+									li.catalog_min_title
+										a(href="#") Цвет
+									li
+										a(href="#") Серый
+									li
+										a(href="#") Белый
+									li
+										a(href="#") Бежевый
+									li
+										a(href="#") Коричневый
+									li
+										a(href="#") Черный
+								ul
+									li.catalog_min_title
+										a(href="#") Размер
+									li
+										a(href="#") 30 x 30 см
+									li
+										a(href="#") 45 x 45 см
+									li
+										a(href="#") 60 x 60 см
+									li
+										a(href="#") 60 x 120 см
+									li
+										a(href="#") 120 x 120 см
+									li
+										a(href="#") 120 x 280 см
+								ul
+									li.catalog_min_title
+										a(href="#") Страна
+									li
+										a(href="#") Россия
+									li
+										a(href="#") Испания
+									li
+										a(href="#") Италия
+									li
+										a(href="#") Германия
+									li
+										a(href="#") Турция
+									li
+										a(href="#") Индия
+								ul
+									li.catalog_min_title
+										a(href="#") Стиль
+									li
+										a(href="#") Моноколор
+									li
+										a(href="#") Пэчворк
+									li
+										a(href="#") Лофт
+									li
+										a(href="#") Классический
+									li
+										a(href="#") Современный
+					.catalog_right_menu(data-catalog-category="3")
+						.catalog_list_title Сантехника
+						.catalog_main_ul
+								ul
+									li.catalog_min_title
+										a(href="#") 3Помещение
+									li
+										a(href="#") Для кухни
+									li
+										a(href="#") Для ванной
+									li
+										a(href="#") Для улицы
+									li
+										a(href="#") Для гостиной
+									li
+										a(href="#") Для коридора
+									li
+										a(href="#") Для балкона
+								ul
+									li.catalog_min_title
+										a(href="#") Назначение
+									li
+										a(href="#") Для пола
+									li
+										a(href="#") Для стен
+									li
+										a(href="#") Для улицы
+									li
+										a(href="#") Для укладки на землю
+								ul
+									li.catalog_min_title
+										a(href="#") Цвет
+									li
+										a(href="#") Серый
+									li
+										a(href="#") Белый
+									li
+										a(href="#") Бежевый
+									li
+										a(href="#") Коричневый
+									li
+										a(href="#") Черный
+								ul
+									li.catalog_min_title
+										a(href="#") Цвет
+									li
+										a(href="#") Серый
+									li
+										a(href="#") Белый
+									li
+										a(href="#") Бежевый
+									li
+										a(href="#") Коричневый
+									li
+										a(href="#") Черный
+								ul
+									li.catalog_min_title
+										a(href="#") Размер
+									li
+										a(href="#") 30 x 30 см
+									li
+										a(href="#") 45 x 45 см
+									li
+										a(href="#") 60 x 60 см
+									li
+										a(href="#") 60 x 120 см
+									li
+										a(href="#") 120 x 120 см
+									li
+										a(href="#") 120 x 280 см
+								ul
+									li.catalog_min_title
+										a(href="#") Страна
+									li
+										a(href="#") Россия
+									li
+										a(href="#") Испания
+									li
+										a(href="#") Италия
+									li
+										a(href="#") Германия
+									li
+										a(href="#") Турция
+									li
+										a(href="#") Индия
+								ul
+									li.catalog_min_title
+										a(href="#") Стиль
+									li
+										a(href="#") Моноколор
+									li
+										a(href="#") Пэчворк
+									li
+										a(href="#") Лофт
+									li
+										a(href="#") Классический
+									li
+										a(href="#") Современный
+					.catalog_right_menu(data-catalog-category="4")
+						.catalog_list_title Сухие смеси
+						.catalog_main_ul
+								ul
+									li.catalog_min_title
+										a(href="#") 4Помещение
+									li
+										a(href="#") Для кухни
+									li
+										a(href="#") Для ванной
+									li
+										a(href="#") Для улицы
+									li
+										a(href="#") Для гостиной
+									li
+										a(href="#") Для коридора
+									li
+										a(href="#") Для балкона
+								ul
+									li.catalog_min_title
+										a(href="#") Назначение
+									li
+										a(href="#") Для пола
+									li
+										a(href="#") Для стен
+									li
+										a(href="#") Для улицы
+									li
+										a(href="#") Для укладки на землю
+								ul
+									li.catalog_min_title
+										a(href="#") Цвет
+									li
+										a(href="#") Серый
+									li
+										a(href="#") Белый
+									li
+										a(href="#") Бежевый
+									li
+										a(href="#") Коричневый
+									li
+										a(href="#") Черный
+								ul
+									li.catalog_min_title
+										a(href="#") Цвет
+									li
+										a(href="#") Серый
+									li
+										a(href="#") Белый
+									li
+										a(href="#") Бежевый
+									li
+										a(href="#") Коричневый
+									li
+										a(href="#") Черный
+								ul
+									li.catalog_min_title
+										a(href="#") Размер
+									li
+										a(href="#") 30 x 30 см
+									li
+										a(href="#") 45 x 45 см
+									li
+										a(href="#") 60 x 60 см
+									li
+										a(href="#") 60 x 120 см
+									li
+										a(href="#") 120 x 120 см
+									li
+										a(href="#") 120 x 280 см
+								ul
+									li.catalog_min_title
+										a(href="#") Страна
+									li
+										a(href="#") Россия
+									li
+										a(href="#") Испания
+									li
+										a(href="#") Италия
+									li
+										a(href="#") Германия
+									li
+										a(href="#") Турция
+									li
+										a(href="#") Индия
+								ul
+									li.catalog_min_title
+										a(href="#") Стиль
+									li
+										a(href="#") Моноколор
+									li
+										a(href="#") Пэчворк
+									li
+										a(href="#") Лофт
+									li
+										a(href="#") Классический
+									li
+										a(href="#") Современный
+
+					
+

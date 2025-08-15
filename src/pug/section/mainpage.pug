@@ -1,0 +1,153 @@
+include ../helpers/mixins/product_cart.pug
+section.main_banner
+    .container
+        .banner
+            .swiper.main_slider
+                .swiper-wrapper
+                    .swiper-slide
+                        img(src="img/main_slide.jpg", alt="плитка")
+                        a(href="") К товарам
+                    .swiper-slide
+                        img(src="img/main_slide.jpg", alt="керамика")
+                        a(href="") К товарам
+                    .swiper-slide
+                        img(src="img/main_slide.jpg", alt="сантехника")
+                        a(href="") К товарам
+                    .swiper-slide
+                        img(src="img/main_slide.jpg", alt="сухие смеси")
+                        a(href="") К товарам
+                .maiin_slider_nav
+                    .swiper-button-next(style="background-image: url('img/slide_arrow.svg');")
+                    .swiper-button-prev(style="background-image: url('img/slide_arrow.svg');")
+                    .swiper-pagination
+            .main_banner_right
+                a.banner_right_item(href="" style="background-image: url('img/0_1.jpg');")
+                    span Хиты<br/> продаж
+                a.banner_right_item(href="" style="background-image: url('img/0_1_1.jpg');")
+                    span   Готовые<br/> решения
+section.catalog_links
+    .container
+        .main_catalog_links
+            a(href="").main_catalog_item(style="background-image: url('img/main_cat_link_01.jpg');") 
+                h4 Плитка
+                .main_catalog_arrow
+            a(href="").main_catalog_item(style="background-image: url('img/main_cat_link_02.jpg');") 
+                h4 Керамогранит
+                .main_catalog_arrow
+            a(href="").main_catalog_item(style="background-image: url('img/main_cat_link_03.jpg');") 
+                h4 Сантехника 
+                .main_catalog_arrow 
+            a(href="").main_catalog_item(style="background-image: url('img/main_cat_link_04.jpg');") 
+                h4 Сухие смеси
+                .main_catalog_arrow
+
+section.manufacturer 
+    .container 
+        h1 Качество от проверенных производителей
+        p Как принято считать, базовые сценарии поведения пользователей набирают популярность среди определенных слоев населения.
+        .swiper.main_manufacturer_slider
+            .swiper-wrapper
+                .swiper-slide.manufacturer_slide(style="background-image: url('img/01_manufacturer.png');")
+                .swiper-slide.manufacturer_slide(style="background-image: url('img/02_manufacturer.png');")
+                .swiper-slide.manufacturer_slide(style="background-image: url('img/03_manufacturer.png');")
+                .swiper-slide.manufacturer_slide(style="background-image: url('img/04_manufacturer.png');")
+                .swiper-slide.manufacturer_slide(style="background-image: url('img/05_manufacturer.png');")
+                .swiper-slide.manufacturer_slide(style="background-image: url('img/06_manufacturer.png');")
+        //- .manufacturer_slider-next(style="background-image: url('img/slide_arrow_black.svg');")    
+        //- .manufacturer_slider-prev(style="background-image: url('img/slide_arrow_black.svg');")
+
+section.ready_design
+    .container 
+        h2 Готовые решения для вашего интерьера
+        p Как принято считать, базовые сценарии поведения пользователей набирают популярность среди определенных слоев населения.
+        .swiper.ready_block
+            .swiper-wrapper
+                .swiper-slide.ready_item
+                    img(src="img/ready_01.jpg", alt="minimal")
+                    p Ванная в стиле minimal – коллекция Axima  Stone
+                .swiper-slide.ready_item
+                    img(src="img/ready_02.jpg", alt="minimal")
+                    p Ванная в стиле minimal – коллекция Axima  Stone
+                .swiper-slide.ready_item
+                    img(src="img/ready_03.jpg", alt="minimal")
+                    p Ванная в стиле minimal – коллекция Axima  Stone
+        .ready_design_last
+            .order_my_design.modal_button(data-modal="my-design") Заказать свой проект
+            a.all_ready_design(href="") Все готовые решения
+                .white_arrow_red_circle(style="background-image: url('img/white_arrow.svg');")
+section.profi_team 
+    .container 
+        .profi_team_block
+            .profi_team_left
+                h2 Команда профессионалов позволяет оценить значение приоретета разума над эмоциями.
+                .profi_team_left_bottom 
+                    .profi_team_left_bottom_item
+                        img(src="img/profi_01.png", alt="доставка")
+                        p Прямые поставки с заводов
+                    .profi_team_left_bottom_item
+                        img(src="img/profi_02.png", alt="доставка")
+                        p Доставка по ЮФО и Крыму
+                    .profi_team_left_bottom_item
+                        img(src="img/profi_03.png", alt="доставка")
+                        p Сертификаты на всю продукцию
+            img.profi_right(src="img/profi_04.png", alt="круг")
+section.hit_sales
+    .container
+        .hit_sales_title
+            h2 Хиты продаж
+            a.all_ready_design.all_ready_design_desc(href="") Все хиты продаж
+                .white_arrow_red_circle(style="background-image: url('img/white_arrow.svg');")
+        .hit_sales_tabs
+            .hit_sales_tabs_item(data_tab_sales="Плитка")
+                img(src="img/tab_icon_01.svg", alt="Плитка")
+                span Плитка
+            .hit_sales_tabs_item(data_tab_sales="Керамогранит") 
+                img(src="img/tab_icon_02.svg", alt="Керамогранит")
+                span Керамогранит
+            .hit_sales_tabs_item(data_tab_sales="Сантехника") 
+                img(src="img/tab_icon_03.svg", alt="Сантехника")
+                span Сантехника
+            .hit_sales_tabs_item(data_tab_sales="Сухие смеси") 
+                img(src="img/tab_icon_04.svg", alt="Сухие смеси")
+                span Сухие&nbsp;смеси
+        .swiper.hit_sales_tab(data_tab_sales="")
+            .swiper-wrapper
+                .swiper-slide.hit_sales_slide
+                    +productCard("img/product_01.png", "img/product_02.png", "img/product_03.png", "img/product_04.png",  "Хит продаж", "56967", "Керамогранит Barcelona светло-серая 600×600", "150 шт./150 м²", "1 723", "2 150", "-20%", "1 523", "1 723")
+                .swiper-slide.hit_sales_slide
+                    +productCard("img/product_01.png", "img/product_02.png", "img/product_03.png", "img/product_04.png",  "Хит продаж", "56967", "Керамогранит Barcelona светло-серая 600×600", "150 шт./150 м²", "1 723", "2 150", "-20%", "1 523", "1 723")
+                .swiper-slide.hit_sales_slide
+                    +productCard("img/product_01.png", "img/product_02.png", "img/product_03.png", "img/product_04.png",  "Хит продаж", "56967", "Керамогранит Barcelona светло-серая 600×600", "150 шт./150 м²", "1 723", "2 150", "-20%", "1 523", "1 723")
+                .swiper-slide.hit_sales_slide
+                    +productCard("img/product_01.png", "img/product_02.png", "img/product_03.png", "img/product_04.png",  "Хит продаж", "56967", "Керамогранит Barcelona светло-серая 600×600", "150 шт./150 м²", "1 723", "2 150", "-20%", "1 523", "1 723")
+                .swiper-slide.hit_sales_slide
+                    +productCard("img/product_01.png", "img/product_02.png", "img/product_03.png", "img/product_04.png",  "Хит продаж", "56967", "Керамогранит Barcelona светло-серая 600×600", "150 шт./150 м²", "1 723", "2 150", "-20%", "1 523", "1 723")
+        a.all_ready_design.all_ready_design_mob(href="") Все хиты продаж
+            .white_arrow_red_circle(style="background-image: url('img/white_arrow.svg');")
+section.beontime
+    .container
+        .beontime__title
+            h2 Успейте купить по выгодной цене
+            a.all_ready_design.all_ready_design_desc(href="") Все акции
+                .white_arrow_red_circle(style="background-image: url('img/white_arrow.svg');")
+        .swiper.beontime__block
+            .swiper-wrapper
+                a(href="").swiper-slide.beontime__block-item
+                    img(src="img/beontime_02.jpg", alt="")
+                    h4 Ванны из искусственного камня
+                    span до -10%
+                a(href="").swiper-slide.beontime__block-item
+                    img(src="img/beontime_01.jpg", alt="")
+                    h4 Распродажа остатков керамогранита
+                    span до -10%
+                a(href="").swiper-slide.beontime__block-item
+                    img(src="img/beontime_03.jpg", alt="")
+                    h4 Скидки на смесители STWORKI
+                    span до -10%
+        a.all_ready_design.all_ready_design_mob(href="") Все хиты продаж
+            .white_arrow_red_circle(style="background-image: url('img/white_arrow.svg');")
+
+
+
+            
+

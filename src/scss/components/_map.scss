@@ -1,0 +1,111 @@
+.map {
+    background-color: $color-white;
+
+    @include mobile-hr {
+        padding: 0 2rem;
+    }
+
+    &__wrapper,
+    &__container {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        width: 100%;
+        min-height: 355px;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @include mobile-hr {
+            border-radius: 18px;
+        }
+    }
+
+    &__wrapper {
+        &--radius {
+            border-radius: 18px;
+        }
+    }
+
+    &__container {
+        z-index: 0;
+    }
+}
+
+.map-icon {
+	position: absolute;
+	left: -23px;
+	top: -23px;
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	// background-color: $color-primary;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 25px;
+		height: 17px;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='16' viewBox='0 0 24 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 6.9588C2.03129 5.38908 3.51326 6.89142 4.33921 8.98834C5.34299 11.5332 6.23613 15.0333 11.3341 15.0849C17.7164 15.1483 17.4991 6.68529 24 7.60889C23.3242 6.28494 21.5696 5.83701 19.8544 6.11052C17.4793 6.4871 15.1714 9.57104 11.8004 9.25392C8.33064 8.92492 8.08563 3.82333 3.02322 4.6399C1.07097 4.95305 0.00395201 6.09863 0.00395201 6.96277' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.06665 3.59708C7.86049 1.8252 9.4294 7.31526 12.3657 7.60462C15.7762 7.94156 16.5508 4.78626 21.1943 5.24212C18.4951 1.78953 17.104 4.65149 13.6224 4.2987C11.3303 4.06879 10.3858 2.71312 8.20036 2.26124C6.88437 1.98772 4.94002 2.2097 4.06665 3.59708Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.8705 2.4275C16.8827 2.16191 15.547 3.37488 13.1244 2.83182C9.82459 2.09453 10.5636 0.441565 12.8557 0.0649905C14.7803 -0.252124 17.602 0.600122 18.8745 2.4275' fill='white'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: center;
+		//background-size: cover;
+
+	}
+}
+
+.loader {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    z-index: 15;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    color: #000;
+    background-color: rgba($color-black, 0.55);
+    opacity: 0;
+    transition: opacity 0.7s ease;
+
+    &::after,
+    &::before {
+        content: "";
+        box-sizing: border-box;
+    }
+
+    &.is-active {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.loader-default {
+    &::after {
+        content: "";
+        position: absolute;
+        left: calc(50% - 24px);
+        top: calc(50% - 24px);
+        border: solid 8px $color-red;
+        border-left-color: transparent;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        animation: rotation 1s linear infinite;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
