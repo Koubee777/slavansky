@@ -70,3 +70,32 @@ document.querySelectorAll('.catalog_menu_item_text').forEach(item => {
     });
   });
 });
+
+
+// Селект в каталоге
+const select = document.querySelector(".catalog_select");
+const selected = select.querySelector(".selected");
+const options = select.querySelectorAll("ul li");
+
+// открыть/закрыть список
+selected.addEventListener("click", () => {
+  select.classList.toggle("open");
+});
+
+// выбор пункта
+options.forEach(option => {
+  option.addEventListener("click", () => {
+    selected.textContent = option.textContent;
+    select.classList.remove("open");
+
+    // если нужно — можно получить value
+    console.log("Выбрано:", option.dataset.value);
+  });
+});
+
+// закрывать при клике вне
+document.addEventListener("click", e => {
+  if (!select.contains(e.target)) {
+    select.classList.remove("open");
+  }
+});

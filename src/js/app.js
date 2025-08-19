@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	@@include('./components/modals.js')
 	@@include('main.js')
 	@@include('sliders/sliders.js')
+	@@include('components/filter.js')
+
 
 
 });

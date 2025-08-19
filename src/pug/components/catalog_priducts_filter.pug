@@ -1,0 +1,97 @@
+mixin checkbox(filter_section, id, name, count, checked=false)
+  li
+    input(type='checkbox' id=`${filter_section}-${id}` checked=checked).hidden
+    label(for=`${filter_section}-${id}`)
+      span.filter-checkmark
+      span.filter-name= name
+      span.filter-count= `${count}`
+
+.filter
+  .filter_section.filter_special
+    input(type='checkbox' id='in-stock' name='special-filter').hidden
+    label(for='in-stock') 
+      h5 Только в наличии
+      .in-stock_radio
+        span
+    input(type='checkbox' id='bestsellers' name='special-filter').hidden
+    label(for='bestsellers') 
+      h5 Хиты продаж
+      .bestsellers_radio
+        span
+
+  .filter_section.price
+    h5 Цена
+    .price-inputs
+      input(type='number' class='from' min='0' max='60000' value='0' placeholder='От')
+      span -
+      input(type='number' class='to' min='0' max='60000' value='60000' placeholder='До')
+    .slider-container
+      .progress
+      input(type='range' class='range-min' min='0' max='60000' value='0')
+      input(type='range' class='range-max' min='0' max='60000' value='60000')
+
+  .filter_section.manufacturer_block
+    h5 Производитель
+    ul
+      +checkbox('manufacturer_block', 'qua', 'QUA', 22)
+      +checkbox('manufacturer_block', 'axima', 'Axima', 14, true)
+      +checkbox('manufacturer_block', 'teks', 'Teks', 14)
+      +checkbox('manufacturer_block', 'gamma', 'Gamma', 4)
+      +checkbox('manufacturer_block', 'ideal', 'Ideal', 13)
+      +checkbox('manufacturer_block', 'italy', 'Плитка Италии', 17)
+    .show-more Показать все
+
+  .filter_section.collections
+    h5 Коллекции
+    ul
+      +checkbox('collections', 'spring', 'Весна', 10)
+      +checkbox('collections', 'summer', 'Лето', 15)
+      +checkbox('collections', 'autumn', 'Осень', 12)
+      +checkbox('collections', 'winter', 'Зима', 8)
+    .show-more Показать все
+
+  .filter_section.colors
+    h5 Цвет
+    ul
+      li
+        input(class="hidden" type="checkbox" id="gray-Серый" data-filter-color="#808080")
+        label(for="gray-Серый") 
+          span(class="filter-checkmark") 
+          span(class="filter-color" style="width: 20px; height: 20px; border-radius: 20px; background-color:#808080; border: 1px solid #E2DDD9; margin-right: 10px;") 
+          span(class="filter-name") Серый
+          span(class="filter-count" ) 22
+      li
+        input.hidden(type="checkbox" id="white-Белый" data-filter-color="#FFFFFF")
+        label(for="white-Белый")
+          span.filter-checkmark
+          span.filter-color(style="width: 20px; height: 20px; border-radius: 20px; background-color:#FFFFFF; border: 1px solid #E2DDD9; margin-right: 10px;")
+          span.filter-name Белый
+          span.filter-count 13
+      li
+        input.hidden(type="checkbox" id="beige-Бежевый" data-filter-color="#F5F5DC")
+        label(for="beige-Бежевый")
+          span.filter-checkmark
+          span.filter-color(style="width: 20px; height: 20px; border-radius: 20px; background-color:#F5F5DC; border: 1px solid #E2DDD9; margin-right: 10px;")
+          span.filter-name Бежевый
+          span.filter-count 43
+      li
+        input.hidden(type="checkbox" id="brown-Коричневый" data-filter-color="#8B4513")
+        label(for="brown-Коричневый")
+          span.filter-checkmark
+          span.filter-color(style="width: 20px; height: 20px; border-radius: 20px; background-color:#8B4513; border: 1px solid #E2DDD9; margin-right: 10px;")
+          span.filter-name Коричневый
+          span.filter-count 57
+      li
+        input.hidden(type="checkbox" id="black-Черный" data-filter-color="#000000")
+        label(for="black-Черный")
+          span.filter-checkmark
+          span.filter-color(style="width: 20px; height: 20px; border-radius: 20px; background-color:#000000; border: 1px solid #E2DDD9; margin-right: 10px;")
+          span.filter-name Черный
+          span.filter-count 34
+    .show-more Показать все
+
+          
+          
+
+                    
+  button.clear.gray_button(id="clear_catalog_filter") Очистить все

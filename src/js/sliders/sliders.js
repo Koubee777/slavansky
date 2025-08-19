@@ -127,3 +127,30 @@
 			},
 		  },
 	  });
+
+	//   const catalog = new Swiper('.catalog_poducts_list', {
+	// 	slidesPerView: 2.1,
+	// 	spaceBetween: 0,
+	// 	loop: false,
+	// 	navigation: {
+	// 		nextEl: ".swiper-button-next",
+	// 		prevEl: ".swiper-button-prev",
+	// 	  },
+	// 	breakpoints: {
+	// 		640: {
+	// 		  slidesPerView: 2.1,
+	// 		  spaceBetween: 0,
+	// 		  loop: false,
+	// 		},
+	// 		768: {
+	// 		  slidesPerView: 4,
+	// 		  spaceBetween: 0,
+	// 		  loop: false,
+	// 		},
+	// 		1024: {
+	// 		  slidesPerView: 4,
+	// 		  spaceBetween: 30,
+	// 		  loop: false,
+	// 		},
+	// 	  },
+	//   });
