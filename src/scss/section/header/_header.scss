@@ -49,6 +49,7 @@ header {
 	@media (max-width:768px) {
 		flex-wrap: nowrap;
 		gap: 20px;
+		padding-top: 10px;
 		& img {
 			width: 50%;
 		}
@@ -267,6 +268,11 @@ header {
 	padding: 10px 120px 10px 0px;
 	gap: 20px;
 }
+.catalog_menu_item img {
+	width: 47px;
+	height: 47px;
+	border-radius: 4px;
+}
 .catalog_menu_item:hover {
 	background-color: #F2EFEC;
 }
@@ -288,6 +294,10 @@ header {
 	max-height: 1000px;
 	opacity: 1;	
 
+}
+.catalog_menu_item_text {
+	font-weight: 500;
+	align-content: center;
 }
 
 .catalog_right_menu {

@@ -1,0 +1,63 @@
+include ../helpers/mixins/ready_made_item.pug
+
+section.ready_made
+.container
+    .catalog_title_block 
+        h1 Готовые решения
+    a.gray_button.ready_filter_open(href="#ready_filter") Фильтры 
+        img(src='img/levels.svg')
+    .ready_made_selets_filter#ready_filter
+        .catalog_select
+            span.selected Тип помещения
+            ul(id="catalog_select")
+                li(data-value="popularity") Кухня
+                li(data-value="price-asc") Санузел
+                li(data-value="price-desc") Прихожная
+        .catalog_select
+            span.selected Цвет
+            ul(id="catalog_select")
+                li(data-value="popularity") Белый
+                li(data-value="price-asc") Серый
+                li(data-value="price-desc") Бежевый
+        .catalog_select
+            span.selected Текстура
+            ul(id="catalog_select")
+                li(data-value="popularity") Бетон
+                li(data-value="price-asc") Матовая
+                li(data-value="price-desc") Абразивная
+        .catalog_select
+            span.selected Стиль
+            ul(id="catalog_select")
+                li(data-value="popularity") Хайтек
+                li(data-value="price-asc") Классика
+                li(data-value="price-desc") Нео классика
+    .catalog_active_filters
+                div Наличие: 351
+                ul  
+                    li Цвет: Белый
+                    li Текстура: Бетон
+                    li Стиль: Хайтек
+                    li Тип помещения: Кухня  
+                span.clear(id="clear_ready_filter")  Очистить все    
+    .ready_made_block 
+        - var n = 3; // Количество повторений
+            each _, index in Array(n)
+                    +ready_made_item("img/ready_made_01.png", "Ванная в стиле minimal – коллекция Axima  Stone")
+                    +ready_made_item("img/ready_made_02.png", "Ванная в стиле minimal – коллекция Axima  Stone")    
+                    +ready_made_item("img/ready_made_03.png", "Ванная в стиле minimal – коллекция Axima  Stone")    
+                    +ready_made_item("img/ready_made_03.png", "Ванная в стиле minimal – коллекция Axima  Stone")    
+                    +ready_made_item("img/ready_made_01.png", "Ванная в стиле minimal – коллекция Axima  Stone")    
+                    +ready_made_item("img/ready_made_04.png", "Ванная в стиле minimal – коллекция Axima  Stone")   
+    .catalog_show_more.gray_button  показать ещё
+    .catalog_pagination_bottom 
+        .catalog_pre_arrow_pagination(style="background-image: url('img/Arrow3.svg');") 
+        ul  
+            li.active 1
+            li 2
+            li 3
+            li 4
+            li 5
+            li 6
+            li ...
+        .catalog_next_arrow_pagination(style="background-image: url('img/Arrow3.svg');")            
+        

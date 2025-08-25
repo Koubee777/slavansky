@@ -1,14 +1,47 @@
+.catalog_filter {
+  width: 20%;
+  @media (max-width:768px) {
+    width: 100%;
+}
+}
 .filter {
   padding: 0px;
   font-family: sans-serif;
-  width: 220px; 
-
+  display: block;
+  position: relative;
+  background-color: #fff;
+  @media (max-width:768px) {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    justify-content: flex-start;
+    overflow-y: scroll;
+  }
+  .top_tltle {
+    display: none;
+    @media (max-width:768px) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px 0px;
+        margin-bottom: 0px;
+        position: relative;
+        & .modal_close {
+          right: 10px;
+        }
+    }
+  }
   .hidden {
     display: none;
   }
 
   .filter_section {
     margin-bottom: 20px;
+    @media (max-width:768px) {
+      width: 100%;    
+    }
 
     h5 {
       margin-bottom: 10px;

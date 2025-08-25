@@ -6,7 +6,10 @@ mixin checkbox(filter_section, id, name, count, checked=false)
       span.filter-name= name
       span.filter-count= `${count}`
 
-.filter
+.filter.modal(id="filter_show")
+  .top_tltle 
+    h3 Фильтр
+    button.modal_close
   .filter_section.filter_special
     input(type='checkbox' id='in-stock' name='special-filter').hidden
     label(for='in-stock') 
@@ -30,6 +33,14 @@ mixin checkbox(filter_section, id, name, count, checked=false)
       input(type='range' class='range-min' min='0' max='60000' value='0')
       input(type='range' class='range-max' min='0' max='60000' value='60000')
 
+  .filter_section.category_block
+    h5 Категория
+    ul
+      +checkbox('category_block', 'Плитка', 'Плитка', 22)
+      +checkbox('category_block', 'Керамогранит', 'Керамогранит', 14, true)
+      +checkbox('category_block', 'Сантехника', 'Сантехника', 14)
+      +checkbox('category_block', 'Сухие смеси', 'Сухие смеси', 4)
+    .show-more Показать все 
   .filter_section.manufacturer_block
     h5 Производитель
     ul
@@ -93,5 +104,5 @@ mixin checkbox(filter_section, id, name, count, checked=false)
           
           
 
-                    
+  button.clear.red_button(id="clear_catalog_filter") Показать 2450 товаров
   button.clear.gray_button(id="clear_catalog_filter") Очистить все

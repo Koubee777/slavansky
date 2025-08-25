@@ -100,11 +100,11 @@
 		},
 	  });
 	  
-	  document.querySelectorAll('.swiper-pagination-bullet').forEach((bullet, index) => {
-		bullet.addEventListener('mouseenter', () => {
-		  productCardImage.slideTo(index);
-		});
-	  });
+	//   document.querySelectorAll('.swiper-pagination-bullet').forEach((bullet, index) => {
+	// 	bullet.addEventListener('mouseenter', () => {
+	// 	  productCardImage.slideTo(index);
+	// 	});
+	//   });
 	  const beontime = new Swiper('.beontime__block', {
 		loop: true,
 		slidesPerView: 1.1,
