@@ -1,0 +1,66 @@
+.cart_page__main {
+    &--items {
+        max-width: 907px;
+        
+        &--top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px ;
+            & .cart_page__main--items--chekbox {
+                display: flex;
+                & input {
+                    display: none;
+                }
+                & label {
+                    display: flex;
+                    cursor: pointer;
+                }
+            }
+            &--right {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        &--items--list {
+            &--item {
+                display: flex;
+                height: 105px;
+                max-width: 907px;
+            }
+        }
+    }
+}
+
+
+.cart_page__main--items--chekbox--chekmark {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #C1BCB8;
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+    flex-shrink: 0;
+}
+.cart_page__main--items--chekbox input[type=checkbox]:checked + label .cart_page__main--items--chekbox--chekmark {
+    background-color: #f00;
+    border: 1px solid #f00;
+}
+.cart_page__main--items--chekbox input[type=checkbox]:checked + label .cart_page__main--items--chekbox--chekmark::after {
+    content: "✔";
+    position: absolute;
+    left: 2px;
+    top: -2px;
+    color: #fff;
+    font-size: 14px;
+}
+.cart_page__main--items--chekbox {
+    display: flex;
+    & input {
+        display: none;
+    }
+    & label {
+        display: flex;
+        cursor: pointer;
+    }
+}

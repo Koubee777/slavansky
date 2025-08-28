@@ -1,0 +1,21 @@
+section.cart
+	.container
+		h1(style="margin-bottom: 64px;") Корзина
+		.cart_page__main 
+			.cart_page__main--items
+				.cart_page__main--items--top
+					.cart_page__main--items--chekbox
+						input(type='checkbox' id='all-add-to-order' name='add-to-order').hidden
+						label(for='all-add-to-order') 
+							span.cart_page__main--items--chekbox--chekmark
+							p Выбрать все
+					.cart_page__main--items--top--right Удалить выбранные
+				.cart_page__main--items--list
+					.cart_page__main--items--list--item
+						.cart_page__main--items--chekbox
+							input(type='checkbox' id='add-to-order' name='add-to-order').hidden
+							label(for='add-to-order') 
+								span.cart_page__main--items--chekbox--chekmark
+						
+			.cart_page__main--order
+

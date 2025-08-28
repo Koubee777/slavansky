@@ -196,3 +196,5 @@ cardSliderMain.on('slideChange', () => {
         cardSliderNav.slideTo(navIndex - 1);
     }
 });
+
+
