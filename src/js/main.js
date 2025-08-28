@@ -137,6 +137,58 @@ safeRun('a.ready_filter_open[href]', link => {
   });
 });
 
+document.querySelectorAll(".mini_tabs").forEach(slider => {
+  const images = slider.querySelectorAll(".product-card__image");
+  const tabsContainer = slider.querySelector(".product-card_hover_tabs");
+
+  // очищаем контейнер табов
+  tabsContainer.innerHTML = "";
+
+  images.forEach((img, index) => {
+    const tab = document.createElement("div");
+    tab.classList.add("hover-tab");
+    tab.dataset.index = index;
+
+    tab.addEventListener("mouseenter", () => {
+      images.forEach(i => i.classList.remove("active_image"));
+      images[index].classList.add("active_image");
+    });
+
+    tabsContainer.appendChild(tab);
+  });
+
+  // ставим активной первую картинку
+  if (images.length > 0) {
+    images[0].classList.add("active_image");
+  }
+});
+if (document.querySelectorAll(".product-card-image_slider")){
+  document.querySelectorAll(".product-card-image_slider").forEach(slider => {
+    const images = slider.querySelectorAll(".product-card__image");
+    const tabsContainer = slider.querySelector(".product-card_hover_tabs");
+  
+    // очищаем контейнер табов
+    tabsContainer.innerHTML = "";
+  
+    images.forEach((img, index) => {
+      const tab = document.createElement("div");
+      tab.classList.add("hover-tab");
+      tab.dataset.index = index;
+  
+      tab.addEventListener("mouseenter", () => {
+        images.forEach(i => i.classList.remove("active_image"));
+        images[index].classList.add("active_image");
+      });
+  
+      tabsContainer.appendChild(tab);
+    });
+  
+    // ставим активной первую картинку
+    if (images.length > 0) {
+      images[0].classList.add("active_image");
+    }
+  });
+}
 
 
 

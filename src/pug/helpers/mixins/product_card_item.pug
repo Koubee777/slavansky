@@ -1,17 +1,13 @@
 //- Определяем миксин
-mixin product_cart_item(image, image2, image3, image4, badge, art, title, stock, price, oldPrice, discount,wholesalePrice, wholesaleOldPrice)
+mixin product_card_item(image, image2, image3, image4, badge, art, title, stock, price, oldPrice, discount,wholesalePrice, wholesaleOldPrice)
     a.product-card(href="#")
-        .swiper.product-card-image_slider(data_tab_sales="")
-            .swiper-wrapper
-                .swiper-slide
+        .product-card-image_slider(data_tab_sales="")
+            .tabs_images_block
                     img.product-card__image(src=image, alt=title)
-                .swiper-slide
                     img.product-card__image(src=image2, alt=title)
-                .swiper-slide
                     img.product-card__image(src=image3, alt=title)
-                .swiper-slide
                     img.product-card__image(src=image4, alt=title)
-            .swiper-pagination-product-card
+                    .product-card_hover_tabs
         if badge
             span.product-card__badge= badge
         .product-card__info

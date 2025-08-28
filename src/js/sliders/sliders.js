@@ -90,15 +90,15 @@
 			},
 		  },
 	  });
-	  const productCardImage = new Swiper('.product-card-image_slider', {
-		slidesPerView: 1,
-		spaceBetween: 10,
-		loop: false,
-		pagination: {
-		  el: '.swiper-pagination-product-card',
-		  clickable: true,
-		},
-	  });
+	//   const productCardImage = new Swiper('.product-card-image_slider', {
+	// 	slidesPerView: 1,
+	// 	spaceBetween: 10,
+	// 	loop: false,
+	// 	pagination: {
+	// 	  el: '.swiper-pagination-product-card',
+	// 	  clickable: true,
+	// 	},
+	//   });
 	  
 	//   document.querySelectorAll('.swiper-pagination-bullet').forEach((bullet, index) => {
 	// 	bullet.addEventListener('mouseenter', () => {
