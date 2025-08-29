@@ -4,18 +4,99 @@ section.cart
 		.cart_page__main 
 			.cart_page__main--items
 				.cart_page__main--items--top
-					.cart_page__main--items--chekbox
+					.styled_checkbox_block
 						input(type='checkbox' id='all-add-to-order' name='add-to-order').hidden
 						label(for='all-add-to-order') 
-							span.cart_page__main--items--chekbox--chekmark
+							span.styled_checkbox
 							p Выбрать все
 					.cart_page__main--items--top--right Удалить выбранные
 				.cart_page__main--items--list
 					.cart_page__main--items--list--item
-						.cart_page__main--items--chekbox
-							input(type='checkbox' id='add-to-order' name='add-to-order').hidden
-							label(for='add-to-order') 
-								span.cart_page__main--items--chekbox--chekmark
-						
+						.styled_checkbox_block
+								input(type='checkbox' id='add-to-order' name='add-to-order').hidden
+								label(for='add-to-order') 
+									span.styled_checkbox
+						.cart_page__main--items--list--item--img
+							img(src="img/cart_item.png")
+						.cart_page__main--items--list--item--info 
+							.cart_page__main--items--list--item--info--article 59 132
+							.cart_page__main--items--list--item--info--name Керамогранит  Amsterdam светло-бежевая 600*1200
+						.cart_page__main--items--list--item--calc 
+							.cart_page__main--items--list--item--calc--top 	
+								.cart_page__main--items--list--item--calc--top--type.active м2	
+								.cart_page__main--items--list--item--calc--top--type шт.	
+								.cart_page__main--items--list--item--calc--top--type упак.	
+							.cart_page__main--items--list--item--calc--value 	1 523 ₽/м2	
+							.cart_page__main--items--list--item--calc--bottom 	
+								.cart_page__main--items--list--item--calc--bottom--minus 
+									img(src="img/icons/minus.png", alt="")
+								h5.cart_page__main--items--list--item--calc--bottom--value 3, 42
+								h5.cart_page__main--items--list--item--calc--bottom--plus 
+									img(src="img/icons/plus.png", alt="")
+						.cart_page__main--items--list--item--last
+							.cart_page__main--items--list--item--last--old 8 580 ₽/м2
+							h3.cart_page__main--items--list--item--last--price 1 523 ₽
+							.cart_page__main--items--list--item--last--bottom 
+								.cart_page__main--items--list--item--last--bottom--compare 
+									img(src="img/icons/line_desc.svg")
+								.cart_page__main--items--list--item--last--bottom--like
+									img(src="img/icons/heart_desc.svg")
+								.cart_page__main--items--list--item--last--bottom--delete
+									img(src="img/icons/delete_cart_desc.svg")
+					.cart_page__main--items--list--item
+							.styled_checkbox_block
+									input(type='checkbox' id='add-to-order2' name='add-to-order2').hidden
+									label(for='add-to-order2') 
+										span.styled_checkbox
+							.cart_page__main--items--list--item--img
+								img(src="img/cart_item.png")
+							.cart_page__main--items--list--item--info 
+								.cart_page__main--items--list--item--info--article 59 132
+								.cart_page__main--items--list--item--info--name Керамогранит  Amsterdam светло-бежевая 600*1200
+							.cart_page__main--items--list--item--calc 
+								.cart_page__main--items--list--item--calc--top 	
+									.cart_page__main--items--list--item--calc--top--type.active м2	
+									.cart_page__main--items--list--item--calc--top--type шт.	
+									.cart_page__main--items--list--item--calc--top--type упак.	
+								.cart_page__main--items--list--item--calc--value 	1 523 ₽/м2	
+								.cart_page__main--items--list--item--calc--bottom 	
+									.cart_page__main--items--list--item--calc--bottom--minus 
+										img(src="img/icons/minus.png", alt="")
+									h5.cart_page__main--items--list--item--calc--bottom--value 3, 42
+									h5.cart_page__main--items--list--item--calc--bottom--plus 
+										img(src="img/icons/plus.png", alt="")
+							.cart_page__main--items--list--item--last
+								.cart_page__main--items--list--item--last--old 8 580 ₽/м2
+								h3.cart_page__main--items--list--item--last--price 1 523 ₽
+								.cart_page__main--items--list--item--last--bottom 
+									.cart_page__main--items--list--item--last--bottom--compare 
+										img(src="img/icons/line_desc.svg")
+									.cart_page__main--items--list--item--last--bottom--like
+										img(src="img/icons/heart_desc.svg")
+									.cart_page__main--items--list--item--last--bottom--delete
+										img(src="img/icons/delete_cart_desc.svg")
+
+
+
+
 			.cart_page__main--order
+				.cart_page__main--order--top
+					.cart_page__main--order--top--title 
+					.cart_page__main--order--top--summprice 
+						h2 8 417
+							h4 ₽
+						.cart_page__main--order--top--credit 
+							span В рассрочку:
+							span 2 805 ₽ 
+							span х  3 мес.
+				.cart_page__main--order--middle
+					.cart_page__main--order--middle--item 
+						span 2 товара  на сумму
+						span 10 103 ₽
+					.cart_page__main--order--middle--item 
+						span Ваша скидка
+						span 1 686 ₽
+
+				.cart_page__main--order--bottom
+
 
