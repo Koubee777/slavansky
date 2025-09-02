@@ -39,7 +39,7 @@ function init() {
                 <div class="custom-balloon__name">${shop.name}</div>
                 <div class="custom-balloon__name">${shop.addres}</div>
                 <div class="custom-balloon__name">${shop.phone}</div>
-                <div class="map-tooltip--close">X</div>
+                <div class="map-tooltip--close"><img src='../img/close_cat.svg'></img></div>
             `;
             tooltip.dataset.id = id;
             tooltip.style.display = 'flex';

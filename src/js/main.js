@@ -190,7 +190,26 @@ if (document.querySelectorAll(".product-card-image_slider")){
   });
 }
 
+// partners tab 
+if (document.querySelector('.partners__top__tab')) {
+  document.querySelectorAll('.partners__top__tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      // убираем active у всех табов и блоков
+      document.querySelectorAll('.partners__top__tab').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.partners__top__block').forEach(el => el.classList.remove('active'));
 
+      // добавляем active к выбранному табу
+      tab.classList.add('active');
+
+      // вычисляем id связанного блока
+      const blockId = tab.id.replace('partner_tab_id_', 'partner_block_id_');
+      const block = document.getElementById(blockId);
+      if (block) {
+        block.classList.add('active');
+      }
+    });
+  });
+}
 
 // =======================
 // ЯКОРЯ
