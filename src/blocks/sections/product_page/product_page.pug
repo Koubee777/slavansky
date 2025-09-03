@@ -197,10 +197,12 @@
 
 		section.hit_sales
 		.container
-			.hit_sales_title
-				h2 Похожие товары
-				a.all_ready_design.all_ready_design_desc(href="") Посмотреть всю коллекцию
-					.white_arrow_red_circle(style="background-image: url('img/white_arrow.svg');")
+			.section_titles
+				.section_titles__title Похожие товары
+				a(href="").section_titles__link 
+					p Посмотреть всю коллекцию
+					.section_titles__link--img 
+						+svg('slider_arrow')
 			.swiper.hit_sales_tab(data_tab_sales="")
 				.swiper-wrapper
 					.swiper-slide.hit_sales_slide
@@ -302,23 +304,12 @@
 
 	section.hit_sales
 		.container
-			.hit_sales_title
-				h2 Похожие товары
-				a.all_ready_design.all_ready_design_desc(href="") Все хиты продаж
-					.white_arrow_red_circle(style="background-image: url('img/white_arrow.svg');")
-			//- .hit_sales_tabs
-			//- 	.hit_sales_tabs_item(data_tab_sales="Плитка")
-			//- 		img(src="img/tab_icon_01.svg", alt="Плитка")
-			//- 		span Плитка
-			//- 	.hit_sales_tabs_item(data_tab_sales="Керамогранит") 
-			//- 		img(src="img/tab_icon_02.svg", alt="Керамогранит")
-			//- 		span Керамогранит
-			//- 	.hit_sales_tabs_item(data_tab_sales="Сантехника") 
-			//- 		img(src="img/tab_icon_03.svg", alt="Сантехника")
-			//- 		span Сантехника
-			//- 	.hit_sales_tabs_item(data_tab_sales="Сухие смеси") 
-			//- 		img(src="img/tab_icon_04.svg", alt="Сухие смеси")
-			//- 		span Сухие&nbsp;смеси
+			.section_titles
+				.section_titles__title Похожие товары
+				a(href="").section_titles__link 
+					p Все хиты продаж
+					.section_titles__link--img 
+						+svg('slider_arrow')
 			.swiper.hit_sales_tab(data_tab_sales="")
 				.swiper-wrapper
 					.swiper-slide.hit_sales_slide
