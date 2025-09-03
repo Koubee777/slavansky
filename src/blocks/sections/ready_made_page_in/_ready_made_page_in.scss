@@ -1,0 +1,19 @@
+.gallery {
+	margin: 0 auto;
+
+	&_sizer,
+	&_item {
+		width: calc((100% - 60px) / 3);
+		box-sizing: border-box;
+	}
+
+	&_item {
+		padding-bottom:	30px;
+
+		img {
+			// display: block;
+			// width: 100%;
+			// height: auto;
+		}
+	}
+}

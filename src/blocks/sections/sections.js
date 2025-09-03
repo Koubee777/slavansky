@@ -57,19 +57,7 @@ safeRun(".city-list li", city => {
   });
 });
 
-// =======================
-// КАТАЛОГ
-// =======================
-// safeRun(".header_nav__btn", button => {
-//   button.addEventListener("click", () => {
-// 	const leftElement = document.querySelector(".catalog_botton_lefl");
-// 	const menuElement = document.querySelector(".catalog_menu");
-// 	if (leftElement && menuElement) {
-// 	  leftElement.classList.toggle("active");
-// 	  menuElement.classList.toggle("active");
-// 	}
-//   });
-// });
+
 document.querySelector('.header_nav__btn').addEventListener("click", () => {
 	console.log('asd')
 	const menuElement = document.querySelector(".catalog_menu");
@@ -194,15 +182,6 @@ if (document.querySelectorAll(".product-card-image_slider")){
 	}
   });
 }
-
-
-
-// =======================
-// ЯКОРЯ
-// =======================
-
-
-
 
 
 
@@ -393,21 +372,7 @@ document.querySelectorAll(".modal").forEach(modal => {
 		  },
 	  });
 	  
-	//   const productCardImage = new Swiper('.product-card-image_slider', {
-	// 	slidesPerView: 1,
-	// 	spaceBetween: 10,
-	// 	loop: false,
-	// 	pagination: {
-	// 	  el: '.swiper-pagination-product-card',
-	// 	  clickable: true,
-	// 	},
-	//   });
-	  
-	//   document.querySelectorAll('.swiper-pagination-bullet').forEach((bullet, index) => {
-	// 	bullet.addEventListener('mouseenter', () => {
-	// 	  productCardImage.slideTo(index);
-	// 	});
-	//   });
+
 	  const beontime = new Swiper('.beontime__block', {
 		loop: true,
 		slidesPerView: 1.1,
@@ -431,33 +396,6 @@ document.querySelectorAll(".modal").forEach(modal => {
 		  },
 	  });
 
-	//   const catalog = new Swiper('.catalog_poducts_list', {
-	// 	slidesPerView: 2.1,
-	// 	spaceBetween: 0,
-	// 	loop: false,
-	// 	navigation: {
-	// 		nextEl: ".swiper-button-next",
-	// 		prevEl: ".swiper-button-prev",
-	// 	  },
-	// 	breakpoints: {
-	// 		640: {
-	// 		  slidesPerView: 2.1,
-	// 		  spaceBetween: 0,
-	// 		  loop: false,
-	// 		},
-	// 		768: {
-	// 		  slidesPerView: 4,
-	// 		  spaceBetween: 0,
-	// 		  loop: false,
-	// 		},
-	// 		1024: {
-	// 		  slidesPerView: 4,
-	// 		  spaceBetween: 30,
-	// 		  loop: false,
-	// 		},
-	// 	  },
-	//   });
-
 
 
 
@@ -470,3 +408,4 @@ for (i = 0; i < phoneInputs.length; i++) {
 @@include("./product_page/product_page.js")
 @@include("./partners_page/partners_page.js")
 @@include("./cart_page/cart_page.js")
+@@include("./ready_made_page_in/ready_made_page_in.js")

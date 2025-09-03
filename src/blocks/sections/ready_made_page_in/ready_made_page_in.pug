@@ -1,0 +1,22 @@
+section.ready_made
+	.container
+		.breadcrumbs 
+			a(href="") Главная
+			a(href="") Готовые решения
+			p Ванная в стиле minimal – коллекция Axima Stone 
+		h1.page_title Ванная в стиле minimal – коллекция Axima Stone 
+		
+		.gallery
+			.gallery_sizer
+			- var n = 4;
+				each _, index in Array(n)
+					.gallery_item
+						img(src="img/gallery_1.png", alt="")
+					.gallery_item
+						img(src="img/gallery_2.png", alt="")
+					.gallery_item
+						img(src="img/gallery_3.png", alt="")
+					.gallery_item
+						img(src="img/gallery_4.png", alt="")
+		
+		include ../pagination/pagination
