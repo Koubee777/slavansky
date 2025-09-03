@@ -469,3 +469,4 @@ for (i = 0; i < phoneInputs.length; i++) {
 @@include("./hit_sales_tabs/hit_sales_tabs.js")
 @@include("./product_page/product_page.js")
 @@include("./partners_page/partners_page.js")
+@@include("./cart_page/cart_page.js")

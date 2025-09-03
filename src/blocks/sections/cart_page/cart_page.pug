@@ -1,101 +1,151 @@
 section.cart
 	.container
-		h1(style="margin-bottom: 64px;") Корзина
-		.cart_page__main 
-			.cart_page__main--items
-				.cart_page__main--items--top
-					.styled_checkbox_block
-						input(type='checkbox' id='all-add-to-order' name='add-to-order').hidden
-						label(for='all-add-to-order') 
-							span.styled_checkbox
-							p Выбрать все
-					.cart_page__main--items--top--right Удалить выбранные
-				.cart_page__main--items--list
-					.cart_page__main--items--list--item
-						.styled_checkbox_block
-								input(type='checkbox' id='add-to-order' name='add-to-order').hidden
-								label(for='add-to-order') 
-									span.styled_checkbox
-						.cart_page__main--items--list--item--img
-							img(src="img/cart_item.png")
-						.cart_page__main--items--list--item--info 
-							.cart_page__main--items--list--item--info--article 59 132
-							.cart_page__main--items--list--item--info--name Керамогранит  Amsterdam светло-бежевая 600*1200
-						.cart_page__main--items--list--item--calc 
-							.cart_page__main--items--list--item--calc--top 	
-								.cart_page__main--items--list--item--calc--top--type.active м2	
-								.cart_page__main--items--list--item--calc--top--type шт.	
-								.cart_page__main--items--list--item--calc--top--type упак.	
-							.cart_page__main--items--list--item--calc--value 	1 523 ₽/м2	
-							.cart_page__main--items--list--item--calc--bottom 	
-								.cart_page__main--items--list--item--calc--bottom--minus 
-									img(src="img/icons/minus.png", alt="")
-								h5.cart_page__main--items--list--item--calc--bottom--value 3, 42
-								h5.cart_page__main--items--list--item--calc--bottom--plus 
-									img(src="img/icons/plus.png", alt="")
-						.cart_page__main--items--list--item--last
-							.cart_page__main--items--list--item--last--old 8 580 ₽/м2
-							h3.cart_page__main--items--list--item--last--price 1 523 ₽
-							.cart_page__main--items--list--item--last--bottom 
-								.cart_page__main--items--list--item--last--bottom--compare 
-									img(src="img/icons/line_desc.svg")
-								.cart_page__main--items--list--item--last--bottom--like
-									img(src="img/icons/heart_desc.svg")
-								.cart_page__main--items--list--item--last--bottom--delete
-									img(src="img/icons/delete_cart_desc.svg")
-					.cart_page__main--items--list--item
-							.styled_checkbox_block
-									input(type='checkbox' id='add-to-order2' name='add-to-order2').hidden
-									label(for='add-to-order2') 
-										span.styled_checkbox
-							.cart_page__main--items--list--item--img
+		.breadcrumbs 
+			a(href="") Главная
+			p Корзина
+		h1.cart_title Корзина
+		.cart_block 
+			.cart_block__main
+				.cart_block__main--products.active
+					.cart_block__main--top
+						.cart_block__main--top--left
+							input(type='checkbox' id='all-add-to-order' name='add-to-order')
+							label(for='all-add-to-order') Выбрать все
+						.cart_block__main--top--right Удалить выбранные
+					.cart_block__main--list
+						.cart_block__main--list--item
+							.cart_block__main--list--item--checkbox
+									input(type='checkbox' id='add-to-order' name='add-to-order')
+									label(for='add-to-order') 
+							.cart_block__main--list--item--img
 								img(src="img/cart_item.png")
-							.cart_page__main--items--list--item--info 
-								.cart_page__main--items--list--item--info--article 59 132
-								.cart_page__main--items--list--item--info--name Керамогранит  Amsterdam светло-бежевая 600*1200
-							.cart_page__main--items--list--item--calc 
-								.cart_page__main--items--list--item--calc--top 	
-									.cart_page__main--items--list--item--calc--top--type.active м2	
-									.cart_page__main--items--list--item--calc--top--type шт.	
-									.cart_page__main--items--list--item--calc--top--type упак.	
-								.cart_page__main--items--list--item--calc--value 	1 523 ₽/м2	
-								.cart_page__main--items--list--item--calc--bottom 	
-									.cart_page__main--items--list--item--calc--bottom--minus 
+							.cart_block__main--list--item--info 
+								.cart_block__main--list--item--info--article 59 132
+								.cart_block__main--list--item--info--name Керамогранит  Amsterdam светло-бежевая 600*1200
+							.cart_block__main--list--item--calc 
+								.cart_block__main--list--item--calc--top 	
+									.cart_block__main--list--item--calc--top--type.active м<sup>2</sup>	
+									.cart_block__main--list--item--calc--top--type шт.	
+									.cart_block__main--list--item--calc--top--type упак.	
+								.cart_block__main--list--item--calc--value 	1 523 ₽/м<sup>2</sup>	
+								.cart_block__main--list--item--calc--bottom 	
+									.cart_block__main--list--item--calc--bottom--minus 
 										img(src="img/icons/minus.png", alt="")
-									h5.cart_page__main--items--list--item--calc--bottom--value 3, 42
-									h5.cart_page__main--items--list--item--calc--bottom--plus 
+									.cart_block__main--list--item--calc--bottom--value 3, 42
+									.cart_block__main--list--item--calc--bottom--plus 
 										img(src="img/icons/plus.png", alt="")
-							.cart_page__main--items--list--item--last
-								.cart_page__main--items--list--item--last--old 8 580 ₽/м2
-								h3.cart_page__main--items--list--item--last--price 1 523 ₽
-								.cart_page__main--items--list--item--last--bottom 
-									.cart_page__main--items--list--item--last--bottom--compare 
-										img(src="img/icons/line_desc.svg")
-									.cart_page__main--items--list--item--last--bottom--like
-										img(src="img/icons/heart_desc.svg")
-									.cart_page__main--items--list--item--last--bottom--delete
-										img(src="img/icons/delete_cart_desc.svg")
+							.cart_block__main--list--item--last
+								//- .cart_block__main--list--item--last--old 8 580 ₽/м2
+								.cart_block__main--list--item--last--price 1 523 <span>₽</span>
+								.cart_block__main--list--item--last--bottom 
+									.cart_block__main--list--item--last--bottom--compare 
+										+svg('compare')
+									.cart_block__main--list--item--last--bottom--like
+										+svg('favorites')
+									.cart_block__main--list--item--last--bottom--delete
+										+svg('remove')
+						.cart_block__main--list--item
+								.cart_block__main--list--item--checkbox
+									input(type='checkbox' id='add-to-order2' name='add-to-order')
+									label(for='add-to-order2') 
+								.cart_block__main--list--item--img
+									img(src="img/cart_item.png")
+								.cart_block__main--list--item--info 
+									.cart_block__main--list--item--info--article 59 132
+									.cart_block__main--list--item--info--name Керамогранит  Amsterdam светло-бежевая 600*1200
+								.cart_block__main--list--item--calc 
+									.cart_block__main--list--item--calc--top 	
+										.cart_block__main--list--item--calc--top--type.active м<sup>2</sup>	
+										.cart_block__main--list--item--calc--top--type шт.	
+										.cart_block__main--list--item--calc--top--type упак.	
+									.cart_block__main--list--item--calc--value 	1 523 ₽/м<sup>2</sup>	
+									.cart_block__main--list--item--calc--bottom 	
+										.cart_block__main--list--item--calc--bottom--minus 
+											img(src="img/icons/minus.png", alt="")
+										.cart_block__main--list--item--calc--bottom--value 3, 42
+										.cart_block__main--list--item--calc--bottom--plus 
+											img(src="img/icons/plus.png", alt="")
+								.cart_block__main--list--item--last
+									.cart_block__main--list--item--last--old 8 580 ₽/м<sup>2</sup>
+									.cart_block__main--list--item--last--price 1 523 <span>₽</span>
+									.cart_block__main--list--item--last--bottom 
+										.cart_block__main--list--item--last--bottom--compare 
+											+svg('compare')
+										.cart_block__main--list--item--last--bottom--like
+											+svg('favorites')
+										.cart_block__main--list--item--last--bottom--delete
+											+svg('remove')
+				
+				.cart_block__main--order 
+					.cart_back 
+						span 
+							+svg('slider_arrow')
+						| Вернуться к покупкам
+					.cart_order__title Оформление заказа
+					.cart_order__item 
+						.cart_order__item--info
+							.cart_order__item--title Ваши данные
+						.cart_order__item--form
+							input(type="text" placeholder="Иванов Иван Иванович")
+							input(type="text" name="phone" placeholder="+7 (___) ___-__-__")
+							input(type="email" placeholder="ivanov@mail.ru")
+					.cart_order__item 
+						.cart_order__item--info
+							.cart_order__item--title Способ получения
+						.cart_order__item--radios
+							.cart_order__item--radio 
+								input(type="radio" name="delivery" id="delivery1" checked)
+								label(for="delivery1") Доставка
+							.cart_order__item--radio  
+								input(type="radio" name="delivery" id="delivery2")
+								label(for="delivery2") Самовывоз
+					.cart_order__item 
+						.cart_order__item--info
+							.cart_order__item--title Ваши данные
+							.cart_order__item--text Стоимость и дату доставки уточнит менеджер после оформления заказа
+						.cart_order__item--form
+							.cart_order__item--form
+								input(type="text" placeholder="Населенный пункт")
+								input(type="text" placeholder="Улица")
+								input(type="text" placeholder="Дом/корпус").cart_order__item--form--half
+								input(type="text" placeholder="Квартира/офис").cart_order__item--form--half
+								textarea(name="" placeholder="Комментарий") 
+					.cart_order__item 
+						.cart_order__item--info
+							.cart_order__item--title Способ оплаты
+						.cart_order__item--radios
+							.cart_order__item--radio 
+								input(type="radio" name="payment" id="payment1" checked)
+								label(for="payment1") 
+									p При получении <span>Наличными или картой</span>
+							.cart_order__item--radio  
+								input(type="radio" name="payment" id="payment2")
+								label(for="payment2") 
+									| СБП
+									img(src="img/sbp.svg", alt="")
+							.cart_order__item--radio 
+								input(type="radio" name="payment" id="payment3")
+								label(for="payment3") 
+									p Банковской картой <span>MasterCard, Visa, МИР</span>
+							.cart_order__item--radio 
+								input(type="radio" name="payment" id="payment4")
+								label(for="payment4") 
+									p В рассрочку: 2 805 ₽ х 3 мес. <span>С картой Халва</span>
 
 
 
+			.cart_block__total
+				.cart_block__total--top 
+					.cart_block__total--top--title Итого
+					.cart_block__total--top--price 8 417 <span>₽</span>
+					.cart_block__total--top--sep В рассрочку: <span>2 805 ₽</span>  х  3 мес.
 
-			.cart_page__main--order
-				.cart_page__main--order--top
-					h4.cart_page__main--order--top--title Итого
-					.cart_page__main--order--top--summprice 
-						h2 8 417
-							span ₽
-						.cart_page__main--order--top--summprice--credit 
-							span В рассрочку: 
-							span 2 805 ₽ 
-							span х  3 мес.
-				.cart_page__main--order--middle
-					.cart_page__main--order--middle--item 
-						span 2 товара  на сумму
-						span 10 103 ₽
-					.cart_page__main--order--middle--item 
-						span Ваша скидка
-						span 1 686 ₽
-				.cart_page__main--order--button.red_button Оформить заказ
-
-
+				.cart_block__total--list 
+					.cart_block__total--list--item 
+						.cart_block__total--list--item--name 2 товара на сумму
+						.cart_block__total--list--item--price 10 103 ₽
+					.cart_block__total--list--item
+						.cart_block__total--list--item--name Ваша скидка
+						.cart_block__total--list--item--price 
+							span 1 686 ₽
+				.cart_block__total--btn Оформить заказ
