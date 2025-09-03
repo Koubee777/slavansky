@@ -21,6 +21,8 @@ export const scss = () => {
 		)
 		.pipe(app.plugins.replace(/@img\//g, '../img/'))
 		.pipe(app.plugins.replace('@npm', "../../node_modules"))
+		.pipe(app.plugins.replace('@components', "../blocks/components"))
+		.pipe(app.plugins.replace('@sections', "../blocks/sections"))
 		.pipe(sass({
 			outputStyle: "expanded"
 		}))

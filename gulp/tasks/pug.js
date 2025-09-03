@@ -3,8 +3,10 @@ import versionNumber from "gulp-version-number";
 import webpHtmlNosvg from "gulp-webp-html-nosvg";
 import pugbem from "gulp-pugbem";
 import htmlbeautify from 'gulp-html-beautify';
+import mergeStream from 'merge-stream';
 
 export const pugHTML = () => {
+
 	return app.gulp.src(app.path.src.pug)
 		.pipe(app.plugins.plumber(
 				app.plugins.notify.onError({
@@ -13,6 +15,8 @@ export const pugHTML = () => {
 				})
 			)
 		)
+		.pipe(app.plugins.replace("@components", '../../blocks/components'))
+		.pipe(app.plugins.replace("@sections", '../../blocks/sections'))
 		.pipe(pug({
 			// closeVoid: true,
 			plugins: [pugbem]
@@ -27,4 +31,12 @@ export const pugHTML = () => {
 		// )
 		.pipe(app.gulp.dest(app.path.build.html))
 		.pipe(app.plugins.browsersync.stream())
+
+
+}
+
+
+function replacePath() {
+	return app.gulp.src("./src/pug/section/**/*.pug")
+		.pipe(app.plugins.replace("@components", '../../../components'))
 }

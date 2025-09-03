@@ -1,0 +1,139 @@
+section.partners 
+	.container
+		.partners__top 
+			.partners__top__tab.active(id="partner_tab_id_1") Торговым точкам
+			.partners__top__tab(id="partner_tab_id_2")  Комплектация строительных объектов
+			.partners__top__tab(id="partner_tab_id_3") Архитектурным и дизайнерским бюро
+
+		.partners__top__block__container
+			.partners__top__block.active(id="partner_block_id_1")
+				.partners__top__block__left
+					.breadcrumbs
+						a(href="#") Главная
+						p Каталог 
+					h1.partners__top__block__left--title Торговым точкам
+					p В частности, начало повседневной работы по формированию позиции способствует подготовке и реализации стандартных подходов. Принимая во внимание показатели успешности, укрепление и развитие внутренней структуры не даёт нам иного выбора.
+					.partners__top__block__left__bottom 
+						a(href="#partners_form").red_button Заявка о сотрудничестве
+						a(href="").partners__top__block__left__bottom--download Скачать прайс лист 
+							span
+								+svg('load')
+				.partners__top__block__right
+					img(src='img/saller_points.png')
+				.partners__top__block__right--mob
+					img(src='img/saller_points_mob.png')
+		.partners__top__block__container
+			.partners__top__block(id="partner_block_id_2")
+				.partners__top__block__left
+					.breadcrumbs
+						a(href="") Главная
+						p Каталог 
+					h1.partners__top__block__left--title Комплектация строительных объектов
+					p В частности, начало повседневной работы по формированию позиции способствует подготовке и реализации стандартных подходов. Принимая во внимание показатели успешности, укрепление и развитие внутренней структуры не даёт нам иного выбора.
+					.partners__top__block__left__bottom 
+						a(href="#partners_form").red_button Заявка о сотрудничестве
+						a(href="").partners__top__block__left__bottom--download Скачать прайс лист 
+							span
+								+svg('load')
+				.partners__top__block__right
+					img(src='img/complectation.png')
+				.partners__top__block__right--mob
+					img(src='img/complectation_mob.png')
+		.partners__top__block__container
+			.partners__top__block(id="partner_block_id_3")
+				.partners__top__block__left
+					.breadcrumbs
+						a(href="#") Главная
+						p Каталог 
+					h1.partners__top__block__left--title Архитектурным и дизайнерским бюро
+					p В частности, начало повседневной работы по формированию позиции способствует подготовке и реализации стандартных подходов. Принимая во внимание показатели успешности, укрепление и развитие внутренней структуры не даёт нам иного выбора.
+					.partners__top__block__left__bottom 
+						a(href="#partners_form").red_button Заявка о сотрудничестве
+						a(href="").partners__top__block__left__bottom--download Скачать прайс лист 
+							span
+								+svg('load')
+				.partners__top__block__right
+					img(src='img/arhitecture.png')
+				.partners__top__block__right--mob
+					img(src='img/arhitecture_mob.png')
+
+		.partners__advantages
+			h2.partners__advantages__title Партнерство с нами удобно и выгодно
+			p.partners__advantages__text В частности, начало повседневной работы по формированию позиции способствует подготовке и реализации стандартных подходов. Принимая во внимание показатели успешности, укрепление и развитие внутренней структуры не даёт нам иного выбора.
+			.partners__advantages__block 
+				.partners__advantages__block__item 
+					.partners__advantages__block__item__top 
+						img(src='img/adv_icon_01.png')
+						.partners__advantages__block__item__top__title Доставка по всей России
+					p Принимая во внимание показатели успешности, укрепление
+				.partners__advantages__block__item 
+					.partners__advantages__block__item__top 
+						img(src='img/adv_icon_02.png')
+						.partners__advantages__block__item__top__title Качественный и удобный сервис
+					p В частности, начало повседневной работы по формированию позиции способствует подготовке.
+				.partners__advantages__block__item 
+					.partners__advantages__block__item__top 
+						img(src='img/adv_icon_03.png')
+						.partners__advantages__block__item__top__title Оперативное выставление счета
+					p Принимая во внимание показатели успешности, укрепление
+			.partners__advantages__content В частности, начало повседневной работы по формированию позиции способствует подготовке и реализации стандартных подходов. Принимая во внимание показатели успешности, укрепление и развитие внутренней структуры не даёт нам иного выбора.
+
+		.partners__form
+			.partners__form__container
+				.partners__form__title Заявка о сотрудничестве
+				.partners__form__text Принимая во внимание показатели успешности, укрепление и развитие внутренней структуры не даёт нам иного выбора, кроме определения укрепления моральных ценностей. 
+				form(metod="post")
+					.partners__form__block
+						input(type="text" placeholder="ФИО")
+						input(type="text" placeholder="Название компании")
+						input(type="text" name="phone" placeholder="+7 (___) ___-__-__")
+						input(type="email" placeholder="E-mail")
+						input(type="text" placeholder="Тема сотрудничества")
+						input(type="file" placeholder="1 файл .pdf, .docx, .doc не более 5 Мб")
+						textarea(name="" placeholder="Комментарий")
+					
+					.styled_checkbox_block
+						input(type='checkbox' id='add-to-order2' name='add-to-order2').hidden
+						label(for='add-to-order2') Я даю согласие на обработку своих персональных данных
+					.partners__form__button.red_button Отправить
+
+
+		.map_section
+			.map_block
+				.map_block__left География наших партнеров
+				.map_block__right
+					#map.map
+						.map-tooltip(data-id="")
+
+		.partners__requisites
+			.partners__requisites__title Реквизиты компании
+			.partners__requisites__block 
+				ul
+					li
+						span Наименование
+						span ИП Слепуха Сергей Алексеевич
+					li
+						span Адрес
+						span 353560, РФ, Краснодарский край, г. Славянск-на-Кубани, ул. Школьная, 204-а
+					li
+						span  ИНН
+						span  234900991148
+					li
+						span  ОГРН
+						span  304234914800822
+					li
+						span  ОКПО
+						span  68757306
+					li
+						span  Банк
+						span  ОАО «ЮГ-ИНВЕСТБАНК» г. Краснодар
+					li
+						span  Расчётный счёт
+						span  40802810800870000425
+					li
+						span  БИК
+						span  040349966
+					li
+						span  Кор. счёт
+						span  30101810600000000966
+

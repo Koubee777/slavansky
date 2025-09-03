@@ -1,87 +1,24 @@
-@import "helpers/mixins";
-@import "helpers/vars";
-
-// google fonts
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
-
-
-// from files
-// @include font("SONGER", "../fonts/SONGERSemiExpanded-Medium", "500", "normal");
-// @include font("SONGER", "../fonts/SONGERSemiExpanded-ExtraBold", "800", "normal");
-// @include font("SONGER", "../fonts/SONGERSemiExpanded-Heavy", "900", "normal");
-// @include font("Montserrat", "../fonts/Montserrat-VariableFont_wght", "400 900", "normal");
-
-
-// @font-face {
-//     font-family: "Montserrat";
-//     src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2"),
-//          url("../fonts/Montserrat-VariableFont_wght.woff") format("woff");
-//     font-weight: 100 900; // диапазон весов
-//     font-style: normal;
-//     font-display: swap;
-// }
-
-body,
-input,
-textarea,
-button,
-select {
-    font-family: Montserrat;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.5;
-    color: $color-black;
-    @media (max-width: 768px) {
-        font-size: 14px;
-    }
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
-h1 {
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 1;
-    @media (max-width: 768px) {
-       font-size: 23px; 
-    }
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Medium.woff') format('woff'), url('../fonts/Montserrat-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
 }
-h2 {
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size: 34px;
-    line-height: 1;
-    margin-bottom: 60px;
-    @media (max-width: 768px) {
-        font-size: 22px;   
-        margin-bottom: 30px;
-    }
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-SemiBold.woff') format('woff'), url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
 }
-h3 {
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 1;
-    @media (max-width: 768px) {
-        font-size: 20px;
-    }
-}
-h4 {
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1;
-    @media (max-width: 768px) {
-        font-size: 16px;
-        margin-bottom: 30px;
-    }
-}
-h5 {
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 1;
-    @media (max-width: 768px) {
-        font-size: 14px;
-    }
-
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
 }

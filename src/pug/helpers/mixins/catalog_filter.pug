@@ -1,7 +1,0 @@
-mixin checkbox(filter_section, id, name, count, checked=false)
-  li
-    input(type='checkbox' id=`${filter_section}-${id}` checked=checked).hidden
-    label(for=`${filter_section}-${id}`)
-      span.filter-checkmark
-      span.filter-name= name
-      span.filter-count= `${count}`

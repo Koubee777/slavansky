@@ -1,0 +1,101 @@
+section.subscribe
+	.container
+		.subscribe_block
+			.subscribe_block__left
+				p Узнавайте первыми<br/> об акциях и скидках
+				img(src="img/gramofon.png", alt="грамофон")
+			form.subscribe_block__form(method="")
+				.subscribe_block__form--left
+					input( name="email" autocomplete="email" type="text" placeholder="E-mail")
+					input(type="checkbox" id="politic" name="politic")
+					label(for="politic") Я даю согласие на обработку своих персональных данных
+				button Подписаться
+footer.footer
+	.container
+		.footer_top
+			.footer_top__left
+				a(href="").footer_top__logo
+					img(src='img/logo_desc.png')
+				.footer_top__info
+					.footer_top__info--left 
+						a(href="tel:+78002500208").footer_top__phone 8 800 250 02 08 
+						a(href="site@slavdvor.shop").footer_top__email site@slavdvor.shop 
+					.footer_top__info--right
+						.footer_btn.modal_button(data-modal="get-callback") Заказать звонок
+			.footer_top__item
+				a(href="").footer_top__item--bold Каталог
+				a(href="") Керамическая плитка
+				a(href="") Керамогранит
+				a(href="") Сантехника
+				a(href="") Сухие смеси
+			.footer_top__item
+				a(href="") 
+					+svg('menu_icon_1')
+					| Готовые решения
+				a(href="") 
+					+svg('menu_icon_2')
+					| Акции
+				a(href="").footer_top__item--bold Сотрудничество
+				a(href="") Партерам
+				a(href="") Доставка и оплата
+			.footer_top__item
+				a(href="").footer_top__item--bold О нас
+				a(href="") О компании
+				a(href="") Блог
+				a(href="") Вакансии
+				a(href="") Контакты и реквизиты
+
+
+		.footer_bottom
+			ul
+				li 
+					a(href="") © Славянский Дворъ 2025
+				li 
+					a(href="") Политика конфиденциальности
+			a(href="").developer
+				span Сделано в
+				img(src="img/icons/labsales.svg", alt="labsales")
+
+
+//- modals
+#modal-city.modal
+	.modal_content
+		h3.h3.modal_city_title Укажите свой город
+		input.search_city(type="text" placeholder="Населенный пункт")
+		button.modal_close
+		ul.city-list
+			li Москва
+			li Санкт-Петербург
+			li Адлер
+			li Владимир
+			li Волгоград
+			li Вологда
+			li Воронеж
+			li Екатеринбург
+			li Иваново
+			li Ижевск
+			li Казань
+			li Калуга
+			li Кострома
+			li Краснодар
+			li Липецк
+			li Набережные Челны
+			li Нижний Новгород
+			li Пенза
+			li Пермь
+			li Пятигорск
+			li Ростов-на-Дону
+			li Рязань
+			li Самара
+			li Саратов
+			li Симферополь
+			li Смоленск
+			li Сочи
+			li Ставрополь
+			li Тверь
+			li Тула
+			li Тюмень
+			li Уфа
+			li Челябинск
+			li Череповец
+			li Ярославль	

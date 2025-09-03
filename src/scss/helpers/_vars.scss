@@ -1,28 +1,16 @@
 // common settings
-$fontsize: 1.7rem;
+$fontSize: 15px;
 $lineHeight: 1;
-
+$transition: .2s ease-in-out;
 
 // fonts
-// $font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell,"Open Sans","Helvetica Neue", sans-serif;
-$font-family-Mulish: 'Mulish', sans-serif, arial;
-$font-Montserrat: 'Montserrat';
-
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+$fontMain: 'Montserrat', sans-serif, arial;
 
 // colors
-$color-black: #101010;
-$color-white: #FFF;
-$color-red: #FE0000;
-$color-gray-1: #8A8A8A;
-$color-gray-2: #C1BCB8;
-$color-gray-3: #E2DDD9;
-$color-gray-4: #F2EFEC;
-
-
-// font color
-$color: $color-black;
-
-
+$mainColor: #101010;
+$red: #FE0000;
+$darkred: #D30000;
 
 // Settings
 $desktop-xl: 1280;

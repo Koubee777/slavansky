@@ -1,0 +1,203 @@
+.subscribe {
+	background-color: #F2EFEC;
+	margin-top: 120px;
+
+	&_block {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		justify-content: space-between;
+
+		&__left {
+			display: flex;
+			align-items: center;
+			gap: 26px;
+
+			p {
+				font-weight: 600;
+				font-size: 20px;
+			}
+			img {
+				margin-top: -29px;
+			}
+		}
+
+		&__form {
+			display: flex;
+			align-items: center;
+			gap: 125px;
+
+			&--left {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+
+				input {
+					border: none;
+					background-color: transparent;
+					font-size: 14px;
+					padding-bottom: 8px;
+					border-bottom: 1px solid #101010;
+
+					&::placeholder {
+						font-size: 14px;
+					}
+					&:focus {
+						&::placeholder {
+							font-size: 0;
+						}
+					}
+					&[type="checkbox"] {
+						display: none;
+
+						&:checked ~ label {
+							&::before {
+								background-color: $red;
+								border-color: $red;
+								background-image: url('data:image/svg+xml,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.59502 9.4828C4.48047 9.59802 4.32419 9.6623 4.16185 9.6623C3.99951 9.6623 3.84322 9.59802 3.72868 9.4828L0.269259 6.02282C-0.089753 5.66381 -0.089753 5.08165 0.269259 4.72331L0.702429 4.29002C1.06155 3.93101 1.64304 3.93101 2.00205 4.29002L4.16185 6.44993L9.99792 0.613741C10.357 0.254729 10.9391 0.254729 11.2975 0.613741L11.7307 1.04702C12.0897 1.40604 12.0897 1.98808 11.7307 2.34654L4.59502 9.4828Z" fill="white"/></svg>');
+							}
+						}
+					}
+				}
+				
+				label {
+					font-size: 12px;
+					line-height: 1.5;
+					color: #8A8A8A;
+					padding-left: 28px;
+					position: relative;
+					cursor: pointer;
+
+					&::before {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 18px;
+						height: 18px;
+						background-color: transparent;
+						border: 1px solid #C1BCB8;
+						border-radius: 4px;
+						transition: $transition;
+						background-image: url('data:image/svg+xml,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.59502 9.4828C4.48047 9.59802 4.32419 9.6623 4.16185 9.6623C3.99951 9.6623 3.84322 9.59802 3.72868 9.4828L0.269259 6.02282C-0.089753 5.66381 -0.089753 5.08165 0.269259 4.72331L0.702429 4.29002C1.06155 3.93101 1.64304 3.93101 2.00205 4.29002L4.16185 6.44993L9.99792 0.613741C10.357 0.254729 10.9391 0.254729 11.2975 0.613741L11.7307 1.04702C12.0897 1.40604 12.0897 1.98808 11.7307 2.34654L4.59502 9.4828Z" /></svg>');
+						background-repeat: no-repeat;
+						background-position: 50% 50%;
+					}
+				}
+			}
+
+			button {
+				border: 1px solid $red;
+				color: $red;
+				padding: 10px 41px;
+				border-radius: 4px;
+				font-weight: 500;
+				font-size: 14px;
+				transition: $transition;
+
+				&:hover {
+					color: $darkred;
+					border-color: $darkred;
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	background-color: #E2DDD9;
+	padding: 30px 0 20px;
+
+	&_top {
+		display: flex;
+		justify-content: space-between;
+		gap: 16px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #101010;
+		
+		&__logo {
+			margin-bottom: 30px;
+		}
+		&__info {
+
+			&--left {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		&__phone {
+			font-weight: 500;
+			font-size: 20px;
+			transition: $transition;
+			margin-bottom: 8px;
+
+			&:hover {
+				color: $red;
+			}
+		}
+		&__email {
+			transition: $transition;
+			font-size: 14px;
+			margin-bottom: 20px;
+
+			&:hover {
+				color: $red;
+			}
+		}
+
+		&__item {
+			display: flex;
+			gap: 15px;
+			flex-direction: column;
+
+			a {
+				width: max-content;
+				transition: $transition;
+				font-size: 14px;
+				display: flex;
+				align-items: center;
+				gap: 6px;
+
+				svg {
+					width: 18px;
+					height: 18px;
+					transition: $transition;
+				}
+
+				&:hover {
+					color: $red;
+				}
+			}
+
+			&--bold {
+				font-weight: bold;
+			}
+		}
+	}
+	&_bottom {
+		padding-top: 10px;
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+
+		ul {
+			display: flex;
+			gap: 60px;
+
+			a {
+				font-size: 14px;
+				color: #797979;
+				transition: $transition;
+
+				&:hover {
+					color: $mainColor;
+				}
+			}
+		}
+		.developer {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+		}
+	}
+}

@@ -2,9 +2,8 @@ extends ../layouts/default
 
 prepend vars
 
-block content
-	include ../section/header/header
-	main.main
-		include ../section/mainpage
-	include ../components/modals/modals
-	include ../section/footer/footer
+block content 
+	include @sections/header/header
+	main
+		include @sections/mainpage/mainpage
+	include @sections/footer/footer

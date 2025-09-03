@@ -1,24 +1,11 @@
 @import "helpers/mixins";
+@import "./font.scss";
 @import "helpers/vars";
 @import "helpers/functions";
 @import "helpers/breakpoint";
-@import "base/general";
-@import "components/components";
-@import "components/product_cart.scss";
-@import "section/section";
-@import "components/modals/modals";
-@import "components/buttons";
-@import "font";
-@import "section/mainpage";
-@import "section/footer";
-@import "components/breadcrumbs";
-@import "section/catalog_products";
-@import "components/catalog_priducts_filter";
-@import "section/catalog_collections";
-@import "section/ready_made";
-@import "section/sales_page";
 
-@import "section/product_page";
-@import "section/collection_page";
-@import "section/cart";
-@import "section/partners";
+@import "base/general";
+
+@import "@components/components";
+@import "@sections/sections";
+

@@ -3,8 +3,8 @@ include ../helpers/mixins
 block vars
 	- const baseDir = ''
 	-
-		const title = 'Главная'
-		const description = 'описание страницы'
+		const title = 'Славянский'
+		const description = ''
 	-
 		const html = {
 			attrs: {
@@ -37,7 +37,7 @@ block vars
 
 
 		}
-
+doctype html
 html(class=html.classList)&attributes(html.attrs)
 	head
 		block head-start
@@ -55,25 +55,26 @@ html(class=html.classList)&attributes(html.attrs)
 			if title !== null
 				title!= title
 		block links
+			link(rel="icon" href=`${baseDir}img/favicon.ico` sizes="any")
+			link(rel="icon" href=`${baseDir}img/favicon.svg` type="image/svg+xml")
+			link(rel="apple-touch-icon" href=`${baseDir}img/apple.png` type="image/svg+xml")
+
 		block styles
-			//- link(rel="stylesheet" href!=`${baseDir}assets/css/bootstrap-grid.css`)
-			//- link(rel="stylesheet" href!=`${baseDir}assets/css/bootstrap-reboot.css`)
-			link(rel="stylesheet" href!=`${baseDir}assets/css/fancybox.css`)
+			//- link(rel="stylesheet" href!=`${baseDir}assets/css/normalize.css`)
 			link(rel="stylesheet" href!=`${baseDir}assets/css/swiper.css`)
-			link(rel="stylesheet" href!=`${baseDir}css/font.css`)
+			link(rel="stylesheet" href!=`${baseDir}assets/css/fancybox.css`)
 			link(rel="stylesheet" href!=`${baseDir}css/style.css?v=${Date.now()}`)
-			link(rel="stylesheet" href!=`${baseDir}css/custom.css`)
+			//- script(src="https://api-maps.yandex.ru/2.1/?apikey=a92dde52-6b45-4e28-acd3-d91e7b5555e0&lang=ru_RU")
+			script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<74847068-4675-412d-bc25-52d84c6d1361>" type="text/javascript")
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
 		block body-start
 		block content
 		block scripts
-			script(src!=`${baseDir}assets/js/fancybox.umd.js`)
-			script(src!=`${baseDir}assets/js/swiper-bundle.js`)
-			script(src!=`${baseDir}assets/js/inputmask.js`)
+			script(src!=`${baseDir}assets/js/swiper-bundle.js` defer)
+			script(src!=`${baseDir}assets/js/fancybox.umd.js` defer)
+			script(src!=`${baseDir}assets/js/inputmask.js` defer)
 			script(src!=`${baseDir}js/app.js?v=${Date.now()}`)
-			script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<74847068-4675-412d-bc25-52d84c6d1361>" type="text/javascript")
-
 		block body-end
 
 

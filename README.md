@@ -6,7 +6,7 @@
 npm run dev
 ```
 
-Запуск в режиме продакшн c минификацией файлов и конвертация изображений
+Запуск в режиме продакшн c минификацией файлов
 ```npm
 npm run build
 ```
@@ -31,16 +31,17 @@ npm run zip
 ## Пути ##
 
 Исходные файлы директория **./src/**
+- **blocks** - библиотека компонентов (по БЭМ)
 - **pug** html шаблоны страниц (реализовано через [gulp-pug]("https://www.npmjs.com/package/gulp-pug") )
-- **scss** стили
-- **js** скрипты  подключение кода через [gulp-file-include]("https://www.npmjs.com/package/gulp-file-include") *БЕЗ ИСПОЛЬЗОВАНИЯ WEBPACK* и **import**
+- **scss** общие настройки стилей
+- **js**  общие скрипты  БЕЗ *WEBPACK* и **import**, через [gulp-file-include
+  ](https://www.npmjs.com/package/gulp-file-include)
 - **img** картинки
 - **svgicons** исходники svg изображений для генерации спрайта [gulp-svg-sprite]("https://www.npmjs.com/package/gulp-svg-sprite")
 - **assets** файлы библиотек (js и css) генерируются в папку **dist/assets**
 
 
 Оптимизированные файлы директория **./dist/**
-
 - **assets** файлы библиотек
 - **css** стили
   - основные **style.css**
@@ -49,22 +50,29 @@ npm run zip
 - **img** изображения
 - **js** скрипты
 
+## BLOCKS ##
+библиотека копонентов (по БЭМ)
+- **components** - отдельные компоненты (кнопки, карточки и т.п.), для подключения новых нужно добавить импорты в соответствующие файлы
+  - **_components.scss**
+  - **components.js**
+  - **components.pug** (для импорта миксинов)
+- **sections** - собраные секции страниц
+  - **_sections.scss**
+  - **sections.js**
+  - **sections.pug** - (встречается редко для подключения миксинов)
+
 ## PUG ##
 **структура**
-- **components** - содержит отдельные (повторяющиеся) компоненты
+- **pages** - страницы (секции подключены через алиасы @sections)
+- **layouts/default.pug** - общий шаблон для всех страниц
 - **helpers** - содержит миксины и иные хелперы (рекомендовано, но не обязательно)
   - **svg** для использования [svg-спрайтов]("https://www.npmjs.com/package/gulp-svg-sprite")
-  - **container** для создания контейнеров (исп container-custom во избежание конфликтов с bootstrap-grid)
-  - **button** для создания кнопок
 
-- **pages** - страницы
-- **layouts/default.pug** - общий шаблон для всех страниц
-- **section** - секции страниц
+
 - для ссылок **на внешние ресурсы** добавляем атрибут **target="_blank"**
 ```html
 <a href="new.html" target="_blank">Открыть в новом окне</a>
 ```
-
 
 ## SCSS ##
 *обязательные файлы style, font, custom
@@ -72,14 +80,12 @@ npm run zip
 - **fonts.scss**  - подключение шрифтов (содержит два примера для шрифта из google fonts и для шрифта из файла)
 - **styles.scss** - общий файл
 - **base/_general** базовые стили
-- **components/** стили компонентов, все файлы подключаеются в **_components**
 - **helpers/** - содержит хелперы
   - _vars - глобальные переменные
   - _mixins - миксины
   - _functions - функции
   - _breakpoint - функции для адаптива
 
-- **section/** - стили секций подключаеются в **_section**
 
 ## svgicons ##
 - при сохранении в данную папку файл автоматически добавляется в общий файл **img/icons.svg**
@@ -112,8 +118,10 @@ npm run zip
 - Картинки в webp не конвертируем
 - Responsive images / Retina - тоже не используем
 - Вставляем картинки по стандарту
+
 ```html
-	<div class="block-bg" style="background-image:url(/img/photo1.jpg)"></div>
+
+<div class="block-bg" style="background-image:url(/src/img/photo1.jpg)"></div>
 ```
 
 ```css
@@ -129,11 +137,11 @@ npm run zip
 
 
 ## Библиотеки ##
-- [bootstrap-grid](https://bootstrap-5.ru/docs/5.3/getting-started/introduction/)
-- [bootstrap-reboot](https://bootstrap-5.ru/docs/5.3/getting-started/introduction/) - для сброса стилей
+- [normalize.css](https://nicolasgallagher.com/about-normalize-css/) - для сброса стилей
 - [swiper](https://swiperjs.com/)
 - [Fancybox](https://fancyapps.com/fancybox/getting-started/) - для popup
 - [inputmask](https://robinherbots.github.io/Inputmask/) - для валидации инпутов с номерами телефонов и email
+- [SimpleBar](https://www.npmjs.com/package/simplebar) - custom scrollbar
 
 Стараемся библиотеками не злоупотреблять используем только в случае необходимости
 

@@ -1,0 +1,238 @@
+mixin checkbox(filter_section, id, name, count, checked=false)
+	li
+		input(type='checkbox' id=`${filter_section}-${id}` checked=checked).hidden
+		label(for=`${filter_section}-${id}`)
+			span.filter-checkmark
+			span.filter-name= name
+			span.filter-count= `${count}`
+section.catalog_products
+.container
+	.catalog_title_block 
+		h1 Керамогранит
+		.catalog_title_block__left  
+			p 2 540 товаров   
+	.catalog_main
+		.catalog_filter
+			//- 1
+			
+
+			.filter.modal(id="filter_show")
+				.top_tltle 
+					h3 Фильтр
+					button.modal_close
+				.filter_section.filter_special
+					input(type='checkbox' id='in-stock' name='special-filter').hidden
+					label(for='in-stock') 
+						h5 Только в наличии
+						.in-stock_radio
+							span
+					input(type='checkbox' id='bestsellers' name='special-filter').hidden
+					label(for='bestsellers') 
+						h5 Хиты продаж
+						.bestsellers_radio
+							span
+
+				.filter_section.price
+					h5 Цена
+					.price-inputs
+						input(type='number' class='from' min='0' max='60000' value='0' placeholder='От')
+						span -
+						input(type='number' class='to' min='0' max='60000' value='60000' placeholder='До')
+					.slider-container
+						.progress
+						input(type='range' class='range-min' min='0' max='60000' value='0')
+						input(type='range' class='range-max' min='0' max='60000' value='60000')
+
+				.filter_section.category_block
+					h5 Категория
+					ul
+						+checkbox('category_block', 'Плитка', 'Плитка', 22)
+						+checkbox('category_block', 'Керамогранит', 'Керамогранит', 14, true)
+						+checkbox('category_block', 'Сантехника', 'Сантехника', 14)
+						+checkbox('category_block', 'Сухие смеси', 'Сухие смеси', 4)
+					.show-more Показать все 
+				.filter_section.manufacturer_block
+					h5 Производитель
+					ul
+						+checkbox('manufacturer_block', 'qua', 'QUA', 22)
+						+checkbox('manufacturer_block', 'axima', 'Axima', 14, true)
+						+checkbox('manufacturer_block', 'teks', 'Teks', 14)
+						+checkbox('manufacturer_block', 'gamma', 'Gamma', 4)
+						+checkbox('manufacturer_block', 'ideal', 'Ideal', 13)
+						+checkbox('manufacturer_block', 'italy', 'Плитка Италии', 17)
+					.show-more Показать все
+
+				.filter_section.collections
+					h5 Коллекции
+					ul
+						+checkbox('collections', 'spring', 'Весна', 10)
+						+checkbox('collections', 'summer', 'Лето', 15)
+						+checkbox('collections', 'autumn', 'Осень', 12)
+						+checkbox('collections', 'winter', 'Зима', 8)
+					.show-more Показать все
+
+				.filter_section.colors
+					h5 Цвет
+					ul
+						li
+							input(class="hidden" type="checkbox" id="gray-Серый" data-filter-color="#808080")
+							label(for="gray-Серый") 
+								span(class="filter-checkmark") 
+								span(class="filter-color" style="width: 20px; height: 20px; border-radius: 20px; background-color:#808080; border: 1px solid #E2DDD9; margin-right: 10px;") 
+								span(class="filter-name") Серый
+								span(class="filter-count" ) 22
+						li
+							input.hidden(type="checkbox" id="white-Белый" data-filter-color="#FFFFFF")
+							label(for="white-Белый")
+								span.filter-checkmark
+								span.filter-color(style="width: 20px; height: 20px; border-radius: 20px; background-color:#FFFFFF; border: 1px solid #E2DDD9; margin-right: 10px;")
+								span.filter-name Белый
+								span.filter-count 13
+						li
+							input.hidden(type="checkbox" id="beige-Бежевый" data-filter-color="#F5F5DC")
+							label(for="beige-Бежевый")
+								span.filter-checkmark
+								span.filter-color(style="width: 20px; height: 20px; border-radius: 20px; background-color:#F5F5DC; border: 1px solid #E2DDD9; margin-right: 10px;")
+								span.filter-name Бежевый
+								span.filter-count 43
+						li
+							input.hidden(type="checkbox" id="brown-Коричневый" data-filter-color="#8B4513")
+							label(for="brown-Коричневый")
+								span.filter-checkmark
+								span.filter-color(style="width: 20px; height: 20px; border-radius: 20px; background-color:#8B4513; border: 1px solid #E2DDD9; margin-right: 10px;")
+								span.filter-name Коричневый
+								span.filter-count 57
+						li
+							input.hidden(type="checkbox" id="black-Черный" data-filter-color="#000000")
+							label(for="black-Черный")
+								span.filter-checkmark
+								span.filter-color(style="width: 20px; height: 20px; border-radius: 20px; background-color:#000000; border: 1px solid #E2DDD9; margin-right: 10px;")
+								span.filter-name Черный
+								span.filter-count 34
+					.show-more Показать все
+
+						
+						
+
+				button.clear.red_button(id="clear_catalog_filter") Показать 2450 товаров
+				button.clear.gray_button(id="clear_catalog_filter") Очистить все
+			//- 2
+		.catalog_result
+			.catalog_popular_collections 
+				p Популярные подборки:
+				ul 
+					li 
+						a Для ванной
+					li 
+						a Для кухни
+					li 
+						a Напольный
+					li 
+						a Серый
+					li 
+						a 60x120 см
+					li 
+						a Пол с мрамором
+					li 
+						a Новогодний
+					li 
+						a Настенный
+					li 
+						a Белый
+					li 
+						a Для улицы
+					li 
+						a Испания
+					li 
+						a Черный
+					li 
+						a 60x60 см
+					li.popular_collections_all 
+						a Показать все
+			.catalog_tab_sort
+				.catalog_tab
+					.catalog_tab.active(id="catalog_tab_products") 
+						h3 Товары
+					.catalog_tab(id="catalog_tab_collections") 
+						h3 Коллекции
+				.catalog_sort
+					a.gray_button.modal_call(href="#filter_show") Фильтры 
+						img(src='img/levels.svg')
+					.catalog_select
+						span.selected По популярности
+						ul(id="catalog_select")
+							li(data-value="popularity") по популярности
+							li(data-value="price-asc") По цене сначала дешевле
+							li(data-value="price-desc") По цене сначала дороже
+			.catalog_active_filters
+				div Наличие: 351
+				ul  
+					li Производитель: Axima
+					li Производитель: PiezaROSA
+					li Размер: 120x60 см
+					li Цвет: серый  
+					li Цвет: белый
+				span.clear(id="clear_catalog_filter_more")  Очистить все
+			.catalog_poducts_list
+				a.product-card(href="#")
+					img.product-card__image(src='img/collection_01.png', alt='')
+				
+					.product-card__info
+						.product-card__title(href="#") Коллекция керамической плитки Amsterdam
+						.product-card__stock В наличии: 
+							span 150 шт./150 м²
+						.product-card__price 
+							span.product-card__price-current от 2 216 ₽/м²
+								p розничная цена
+						.product-card__price.wholesale_price
+							span.product-card__price-current от 2 216 ₽/м²
+								p оптовая цена
+					.product-card__bottom-block
+						.product-card__red_button.red_button(data-incart="") В коллекцию
+						.product-card__compare_button(data-compare="")
+							img(src="./img/icons/line_desc.svg", alt="")
+						.product-card__like_button(data-like="")
+							img(src="./img/icons/heart_desc.svg", alt="")
+				
+					a.catalog_poducts_ready_link(href="")
+							.catalog_poducts_ready_img(style="background-image: url('img/ready_in_catalog.png');")
+								.catalog_poducts_ready_top
+									h4 Готовые решения
+									p Как принято считать, базовые сценарии поведения.
+								.main_catalog_arrow
+
+					a.catalog_poducts_ready_link(href="")
+							.catalog_poducts_ready_img(style="background-image: url('img/ready_in_catalog_max.png');")
+								.catalog_poducts_ready_top
+									h4 Максимальная выгода
+									p Как принято считать, базовые сценарии поведения.
+								.main_catalog_arrow
+						
+							
+
+
+													
+			.catalog_show_more.gray_button  показать ещё
+			.catalog_pagination_bottom 
+				.catalog_pre_arrow_pagination(style="background-image: url('img/Arrow3.svg');") 
+				ul  
+					li.active 1
+					li 2
+					li 3
+					li 4
+					li 5
+					li 6
+					li ...
+				.catalog_next_arrow_pagination(style="background-image: url('img/Arrow3.svg');") 
+			
+			.manufacturer 
+					h1 Популярные бренды
+					//- p Как принято считать, базовые сценарии поведения пользователей набирают популярность среди определенных слоев населения.
+					.swiper.main_manufacturer_slider
+						.swiper-wrapper
+							.swiper-slide.manufacturer_slide(style="background-image: url('img/01_manufacturer.png');")
+							.swiper-slide.manufacturer_slide(style="background-image: url('img/02_manufacturer.png');")
+							.swiper-slide.manufacturer_slide(style="background-image: url('img/03_manufacturer.png');")
+							.swiper-slide.manufacturer_slide(style="background-image: url('img/04_manufacturer.png');")
+							.swiper-slide.manufacturer_slide(style="background-image: url('img/05_manufacturer.png');")
+							.swiper-slide.manufacturer_slide(style="background-image: url('img/06_manufacturer.png');")

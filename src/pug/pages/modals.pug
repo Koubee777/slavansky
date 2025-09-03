@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+prepend vars
+
+block content 
+	include @sections/header/header
+	main
+		.container 
+			h1 Модалки
+			a(href="" data-dasdasdasdkasd).modal_button Форма 1
+			a(href="" data-dasdasdasdkasd).modal_button Окно спасибо
+	include @sections/footer/footer

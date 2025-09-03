@@ -1,0 +1,178 @@
+.collection_page
+	
+	//- .container 
+	//- 	.breadcrumbs
+	//- 		a(href="") Главная
+	//- 		a(href="") Керамогранит
+	//- 		p Керамогранит Amsterdam светло-бежевая 600*1200	
+	.container 
+		section.collection_page__main
+			.product_page__main--sliders 
+				.product_page__main--slider--nav--wrapper 
+					.product_page__main--slider--nav.swiper
+						.swiper-wrapper  
+							.product_page__main--slider--nav--item.swiper-slide 
+								img(src="img/collection_01.png", alt="")
+							.product_page__main--slider--nav--item.swiper-slide 
+								img(src="img/slide_card_small_2.png", alt="")
+							.product_page__main--slider--nav--item.swiper-slide 
+								img(src="img/slide_card_small_1.png", alt="")
+							.product_page__main--slider--nav--item.swiper-slide 
+								img(src="img/slide_card_small_2.png", alt="")
+							.product_page__main--slider--nav--item.swiper-slide 
+								img(src="img/slide_card_small_1.png", alt="")
+							.product_page__main--slider--nav--item.swiper-slide 
+								img(src="img/slide_card_small_2.png", alt="")
+
+							.product_page__main--slider--nav--item.swiper-slide 
+								img(src="img/slide_card_small_2.png", alt="")
+							.product_page__main--slider--nav--item.swiper-slide 
+								img(src="img/slide_card_small_1.png", alt="")
+							.product_page__main--slider--nav--item.swiper-slide 
+								img(src="img/slide_card_small_2.png", alt="")
+				.product_page__main--slider--main--wrapper
+					.product_page__main--slider--main.swiper
+						.swiper-wrapper  
+							.product_page__main--slider--main--item.swiper-slide 
+								img(src="img/slide_card_small_collection_1.png", alt="")
+							.product_page__main--slider--main--item.swiper-slide 
+								img(src="img/slide_card_big_1.png", alt="")
+							.product_page__main--slider--main--item.swiper-slide 
+								img(src="img/slide_card_big_1.png", alt="")
+							.product_page__main--slider--main--item.swiper-slide 
+								img(src="img/slide_card_big_1.png", alt="")
+							.product_page__main--slider--main--item.swiper-slide 
+								img(src="img/slide_card_big_1.png", alt="")
+							.product_page__main--slider--main--item.swiper-slide 
+								img(src="img/slide_card_big_1.png", alt="")
+
+							.product_page__main--slider--main--item.swiper-slide 
+								img(src="img/slide_card_big_1.png", alt="")
+							.product_page__main--slider--main--item.swiper-slide 
+								img(src="img/slide_card_big_1.png", alt="")
+							.product_page__main--slider--main--item.swiper-slide 
+								img(src="img/slide_card_big_1.png", alt="")
+						.product_page__main--slider--main--nav 
+							.product_page__main--slider--main--nav--prev 
+								+svg('cardslider_main_arrow')
+							.product_page__main--slider--main--nav--next 
+								+svg('cardslider_main_arrow')
+						.product_page__main--slider--main--pagination
+
+			.collection_page__main--info 					
+				h1.collection_page__main--info--title Коллекция керамической плитки Amsterdam 
+				.collection_page__main--info--manufacture 
+					a(href="").collection_page__main--info--manufacture--logo
+						img(src="/img/card_manufacture.png", alt="") 
+				.collection_page__main--info--block--buttons 
+						.collection_page__main--info--block--buttons--btn 
+							img(src="img/icons/arrow9.svg", alt="")
+							p К товарам коллекции
+						.collection_page__main--info--block--buttons--compare
+							img(src="img/icons/line_desc_red.svg", alt="") 
+						.collection_page__main--info--block--buttons--favorite
+							img(src="img/icons/heart_desc_red.svg", alt="") 
+
+
+
+				.collection_page__main--info--quantity В наличии: 150 шт. / 150 м2
+				
+				.collection_page__main--info--about 
+					.collection_page__main--info--about--list 
+						.collection_page__main--info--about--list--item 
+							.collection_page__main--info--about--list--item--name Основной размер, см
+							.collection_page__main--info--about--list--item--value 60х120
+						.collection_page__main--info--about--list--item 
+							.collection_page__main--info--about--list--item--name Бренд
+							.collection_page__main--info--about--list--item--value Stellare ceramic
+						.collection_page__main--info--about--list--item 
+							.collection_page__main--info--about--list--item--name Материал
+							.collection_page__main--info--about--list--item--value Керамогранит
+						.collection_page__main--info--about--list--item 
+							.collection_page__main--info--about--list--item--name Назначение
+							.collection_page__main--info--about--list--item--value Для пола / Для стен
+						.collection_page__main--info--about--list--item 
+							.collection_page__main--info--about--list--item--name Поверхность
+							.collection_page__main--info--about--list--item--value Матовая
+						.collection_page__main--info--about--list--item 
+							.collection_page__main--info--about--list--item--name Структура поверхности
+							.collection_page__main--info--about--list--item--value Гладкая
+						.collection_page__main--info--about--list--item 
+							.collection_page__main--info--about--list--item--name Ректификация
+							.collection_page__main--info--about--list--item--value Есть
+						.collection_page__main--info--about--list--item 
+							.collection_page__main--info--about--list--item--name Износостойкость
+							.collection_page__main--info--about--list--item--value Класс 3 (PEI III)
+
+		section.hit_sales
+		.container
+			.hit_sales_title
+				h2 Все товары коллекции
+			.swiper.hit_sales_tab(data_tab_sales="")
+				.swiper-wrapper
+					.swiper-slide.hit_sales_slide
+						a.product-card(href="#")
+							img.product-card__image(src='img/collection_01.png', alt='')
+						
+							.product-card__info
+								.product-card__title(href="#") Коллекция керамической плитки Amsterdam
+								.product-card__stock В наличии: 
+									span 150 шт./150 м²
+								.product-card__price 
+									span.product-card__price-current от 2 216 ₽/м²
+										p розничная цена
+								.product-card__price.wholesale_price
+									span.product-card__price-current от 2 216 ₽/м²
+										p оптовая цена
+							.product-card__bottom-block
+								.product-card__red_button.red_button(data-incart="") В коллекцию
+								.product-card__compare_button(data-compare="")
+									img(src="./img/icons/line_desc.svg", alt="")
+								.product-card__like_button(data-like="")
+									img(src="./img/icons/heart_desc.svg", alt="")
+					a.all_ready_design.all_ready_design_mob(href="") Посмотреть всю коллекцию
+				.white_arrow_red_circle(style="background-image: url('img/white_arrow.svg');")
+	section.ready_design
+		.container 
+			h2 Готовые решения
+			.swiper.ready_block
+				.swiper-wrapper
+					a.swiper-slide.ready_item
+						img(src="img/ready_01.jpg", alt="minimal")
+						p Ванная в стиле minimal – коллекция Axima  Stone
+					a.swiper-slide.ready_item
+						img(src="img/ready_02.jpg", alt="minimal")
+						p Ванная в стиле minimal – коллекция Axima  Stone
+					a.swiper-slide.ready_item
+						img(src="img/ready_03.jpg", alt="minimal")
+						p Ванная в стиле minimal – коллекция Axima  Stone
+			.ready_design_last
+				.order_my_design.modal_button(data-modal="my-design") Заказать свой проект
+				a.all_ready_design(href="") Все готовые решения
+					.white_arrow_red_circle(style="background-image: url('img/white_arrow.svg');")
+
+	section.hit_sales
+		.container
+			.hit_sales_title
+				h2 Похожие товары
+			.catalog_poducts_list.collections_list          
+				a.product-card(href="#")
+					img.product-card__image(src='img/collection_01.png', alt='')
+				
+					.product-card__info
+						.product-card__title(href="#") Коллекция керамической плитки Amsterdam
+						.product-card__stock В наличии: 
+							span 150 шт./150 м²
+						.product-card__price 
+							span.product-card__price-current от 2 216 ₽/м²
+								p розничная цена
+						.product-card__price.wholesale_price
+							span.product-card__price-current от 2 216 ₽/м²
+								p оптовая цена
+					.product-card__bottom-block
+						.product-card__red_button.red_button(data-incart="") В коллекцию
+						.product-card__compare_button(data-compare="")
+							img(src="./img/icons/line_desc.svg", alt="")
+						.product-card__like_button(data-like="")
+							img(src="./img/icons/heart_desc.svg", alt="")
+						

@@ -2,21 +2,19 @@ extends ../layouts/default
 
 prepend vars
 
-block content
-	.container 
-		h1(style="margin-bottom: 64px;") Страницы
-
-		div(style="display:flex;flex-direction:column;gap:16px;") 
+block content 
+	+container
+		div(style="color: #000;display: flex;flex-direction: column;gap: 16px;") 
+			h1(style="margin-bottom: 16px;") Страницы
+			
 			a(href="./main_page.html") Главная
-			a(href="./catalog_collections_page.html") Каталог - товары
-			a(href="./product_card_page.html") Карточка товара
-			a(href="./catalog_products_page.html") Каталог - коллекции
+			a(href="./catalog_page.html") Каталог - товары
+			a(href="./product_page.html") Карточка товара
+			a(href="./collections_page.html") Каталог - коллекции
 			a(href="./collection_card_page.html") Карточка коллекции
 			a(href="./ready_made_page.html") Готовые решения
-			a(href="./sales_page.html") Акции
+			a(href="./stocks_page.html") Акции
 			a(href="./cart_page.html") Корзина
-			a(href="./partners_page.html") Партнерам	
+			a(href="./partners_page.html") Партнерам
 
-
-			//- a(href="./partners_page.html") Партнерам
-			
+			a(href="./modals.html") Модалки

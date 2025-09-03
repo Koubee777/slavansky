@@ -15,8 +15,6 @@
 	"author": "Alina mosenka",
 	"license": "ISC",
 	"dependencies": {
-		"@fancyapps/ui": "^6.0.22",
-		"bootstrap": "^5.2.3",
 		"inputmask": "^5.0.7",
 		"lazysizes": "^5.3.2"
 	},
@@ -60,15 +58,14 @@
 		"gulp-webp-html-nosvg": "^1.0.9",
 		"gulp-webpcss": "^1.1.1",
 		"gulp-zip": "^5.1.0",
+		"merge-stream": "^2.0.0",
 		"postcss": "8.3.6",
 		"postcss-reporter": "7.0.2",
 		"postcss-scss": "4.0.0",
 		"pug-lint": "^2.6.0",
 		"sass": "1.51.0",
 		"svg4everybody": "^2.1.9",
-		"swiper": "^8.1.4",
-		"webp-converter": "2.2.3",
-		"webpack": "^5.72.0",
-		"webpack-stream": "^7.0.0"
+		"swiper": "^8.1.4"
+
 	}
 }

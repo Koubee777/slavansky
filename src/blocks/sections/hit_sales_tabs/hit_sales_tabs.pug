@@ -1,0 +1,101 @@
+section.hit_sales
+		.section_titles
+			.section_titles__title Хиты продаж
+			a(href="").section_titles__link 
+				p Все хиты продаж
+				.section_titles__link--img 
+					+svg('slider_arrow')
+		.hit_sales_tabs
+			.hit_sales_tabs_item.active(data_tab_sales="Плитка")
+				+svg('tab_icon_1')
+				span Плитка
+			.hit_sales_tabs_item(data_tab_sales="Керамогранит") 
+				+svg('tab_icon_2')
+				span Керамогранит
+			.hit_sales_tabs_item(data_tab_sales="Сантехника") 
+				+svg('tab_icon_3')
+				span Сантехника
+			.hit_sales_tabs_item(data_tab_sales="Сухие смеси") 
+				+svg('tab_icon_4')
+				span Сухие&nbsp;смеси
+		
+		.hit_sales_content.active
+			.swiper.hit_sales_tab(data_tab_sales="")
+				.swiper-wrapper
+					- var n = 8;
+						each _, index in Array(n)
+							.swiper-slide.hit_sales_slide
+								a.product-card(href="#")
+									.product-card-image_slider(data_tab_sales="")
+										.tabs_images_block
+												img.product-card__image(src="img/product_01.png", alt='title')
+												img.product-card__image(src="img/product_02.png", alt='')
+												img.product-card__image(src="img/product_03.png", alt='')
+												img.product-card__image(src="img/product_04.png", alt='')
+												.product-card_hover_tabs
+									
+										span.product-card__badge Хит продаж
+									.product-card__info
+										span.product-card__art 56967
+										.product-card__title(href="#") Керамогранит Barcelona светло-серая 600×600
+										.product-card__stock В наличии:&nbsp;
+											span 150 шт./150 м<sup>2</sup>
+										.product-card__price
+											.product-card__price-current 1 723 <span>₽/м<sup>2</sup></span>
+											.product-card__price-old 2 150 <span>₽/м<sup>2</sup></span>
+											p Розничная цена
+										.product-card__price.wholesale_price
+											.product-card__price-current 1 523 <span>₽/м<sup>2</sup></span>
+											.product-card__price-old 1 723 <span>₽/м<sup>2</sup></span>
+											.product-card__discount -20%
+											p Оптовая цена
+									.product-card__bottom-block
+										.product-card__red_button.red_button(data-incart="") В корзину
+										.product-card__compare_button(data-compare="")
+											img(src="./img/icons/line_desc.svg", alt="")
+										.product-card__like_button(data-like="")
+											img(src="./img/icons/heart_desc.svg", alt="")
+					
+			a.all_ready_design.all_ready_design_mob(href="") Все хиты продаж
+				.white_arrow_red_circle(style="background-image: url('img/white_arrow.svg');")
+
+		.hit_sales_content
+			p 2
+			.swiper.hit_sales_tab(data_tab_sales="")
+				.swiper-wrapper
+					- var n = 8;
+						each _, index in Array(n)
+							.swiper-slide.hit_sales_slide
+								a.product-card(href="#")
+									.product-card-image_slider(data_tab_sales="")
+										.tabs_images_block
+												img.product-card__image(src="img/product_01.png", alt='title')
+												img.product-card__image(src="img/product_02.png", alt='')
+												img.product-card__image(src="img/product_03.png", alt='')
+												img.product-card__image(src="img/product_04.png", alt='')
+												.product-card_hover_tabs
+									
+										span.product-card__badge Хит продаж
+									.product-card__info
+										span.product-card__art 56967
+										.product-card__title(href="#") Керамогранит Barcelona светло-серая 600×600
+										.product-card__stock В наличии:&nbsp;
+											span 150 шт./150 м<sup>2</sup>
+										.product-card__price
+											.product-card__price-current 1 723 <span>₽/м<sup>2</sup></span>
+											.product-card__price-old 2 150 <span>₽/м<sup>2</sup></span>
+											p Розничная цена
+										.product-card__price.wholesale_price
+											.product-card__price-current 1 523 <span>₽/м<sup>2</sup></span>
+											.product-card__price-old 1 723 <span>₽/м<sup>2</sup></span>
+											.product-card__discount -20%
+											p Оптовая цена
+									.product-card__bottom-block
+										.product-card__red_button.red_button(data-incart="") В корзину
+										.product-card__compare_button(data-compare="")
+											img(src="./img/icons/line_desc.svg", alt="")
+										.product-card__like_button(data-like="")
+											img(src="./img/icons/heart_desc.svg", alt="")
+					
+			a.all_ready_design.all_ready_design_mob(href="") Все хиты продаж
+				.white_arrow_red_circle(style="background-image: url('img/white_arrow.svg');")

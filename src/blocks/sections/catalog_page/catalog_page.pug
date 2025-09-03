@@ -1,0 +1,238 @@
+mixin checkbox(filter_section, id, name, count, checked=false)
+	li
+		input(type='checkbox' id=`${filter_section}-${id}` checked=checked).hidden
+		label(for=`${filter_section}-${id}`)
+			span.filter-checkmark
+			span.filter-name= name
+			span.filter-count= `${count}`
+section.catalog_products
+	.container
+		.breadcrumbs
+			a(href="") Главная
+			p Керамогранит
+		.catalog_title_block 
+			h1.catalog_title_block__title Керамогранит
+			.catalog_title_block__total
+				p 2 540 товаров   
+		.catalog_main
+			.catalog_filter
+				//- 1
+				.filter.modal(id="filter_show")
+					.top_tltle 
+						h3 Фильтр
+						button.modal_close
+					.filter_section.filter_special
+						input(type='checkbox' id='in-stock' name='special-filter').hidden
+						label(for='in-stock') 
+							.filter_special__title Только в наличии
+							.in-stock_radio
+								span
+						input(type='checkbox' id='bestsellers' name='special-filter').hidden
+						label(for='bestsellers') 
+							.filter_special__title Хиты продаж
+							.in-stock_radio
+								span
+
+					.filter_section.price
+						h5 Цена
+						.price-inputs
+							input(type='number' class='from' min='0' max='60000' value='0' placeholder='От')
+							span -
+							input(type='number' class='to' min='0' max='60000' value='60000' placeholder='До')
+						.slider-container
+							.progress
+							input(type='range' class='range-min' min='0' max='60000' value='0')
+							input(type='range' class='range-max' min='0' max='60000' value='60000')
+
+					.filter_section.category_block
+						h5 Категория
+						ul
+							+checkbox('category_block', 'Плитка', 'Плитка', 22)
+							+checkbox('category_block', 'Керамогранит', 'Керамогранит', 14, true)
+							+checkbox('category_block', 'Сантехника', 'Сантехника', 14)
+							+checkbox('category_block', 'Сухие смеси', 'Сухие смеси', 4)
+						.show-more Показать все 
+					.filter_section.manufacturer_block
+						h5 Производитель
+						ul
+							+checkbox('manufacturer_block', 'qua', 'QUA', 22)
+							+checkbox('manufacturer_block', 'axima', 'Axima', 14, true)
+							+checkbox('manufacturer_block', 'teks', 'Teks', 14)
+							+checkbox('manufacturer_block', 'gamma', 'Gamma', 4)
+							+checkbox('manufacturer_block', 'ideal', 'Ideal', 13)
+							+checkbox('manufacturer_block', 'italy', 'Плитка Италии', 17)
+						.show-more Показать все
+
+					.filter_section.collections
+						h5 Коллекции
+						ul
+							+checkbox('collections', 'spring', 'Весна', 10)
+							+checkbox('collections', 'summer', 'Лето', 15)
+							+checkbox('collections', 'autumn', 'Осень', 12)
+							+checkbox('collections', 'winter', 'Зима', 8)
+						.show-more Показать все
+
+					.filter_section.colors
+						h5 Цвет
+						ul
+							li
+								input(class="hidden" type="checkbox" id="gray-Серый" data-filter-color="#808080")
+								label(for="gray-Серый") 
+									span(class="filter-checkmark") 
+									span(class="filter-color" style="width: 20px; height: 20px; border-radius: 20px; background-color:#808080; border: 1px solid #E2DDD9; ") 
+									span(class="filter-name") Серый
+									span(class="filter-count" ) 22
+							li
+								input.hidden(type="checkbox" id="white-Белый" data-filter-color="#FFFFFF")
+								label(for="white-Белый")
+									span.filter-checkmark
+									span.filter-color(style="width: 20px; height: 20px; border-radius: 20px; background-color:#FFFFFF; border: 1px solid #E2DDD9; ")
+									span.filter-name Белый
+									span.filter-count 13
+							li
+								input.hidden(type="checkbox" id="beige-Бежевый" data-filter-color="#F5F5DC")
+								label(for="beige-Бежевый")
+									span.filter-checkmark
+									span.filter-color(style="width: 20px; height: 20px; border-radius: 20px; background-color:#F5F5DC; border: 1px solid #E2DDD9; ")
+									span.filter-name Бежевый
+									span.filter-count 43
+							li
+								input.hidden(type="checkbox" id="brown-Коричневый" data-filter-color="#8B4513")
+								label(for="brown-Коричневый")
+									span.filter-checkmark
+									span.filter-color(style="width: 20px; height: 20px; border-radius: 20px; background-color:#8B4513; border: 1px solid #E2DDD9; ")
+									span.filter-name Коричневый
+									span.filter-count 57
+							li
+								input.hidden(type="checkbox" id="black-Черный" data-filter-color="#000000")
+								label(for="black-Черный")
+									span.filter-checkmark
+									span.filter-color(style="width: 20px; height: 20px; border-radius: 20px; background-color:#000000; border: 1px solid #E2DDD9; ")
+									span.filter-name Черный
+									span.filter-count 34
+						.show-more Показать все
+
+							
+							
+
+					button.clear.red_button(id="clear_catalog_filter") Показать 2450 товаров
+					button.clear.gray_button(id="clear_catalog_filter") Очистить все
+				//- 2
+			.catalog_result
+				.catalog_popular_collections 
+					p Популярные подборки:
+					a Для ванной
+					a Для кухни
+					a Напольный
+					a Серый
+					a 60x120 см
+					a Пол с мрамором
+					a Новогодний
+					a Настенный
+					a Белый
+					a Для улицы
+					a Испания
+					a Черный
+					a 60x60 см
+					.popular_collections_all 
+						a Показать все
+				.catalog_tab_sort
+					.catalog_tab
+						.catalog_tab(id="catalog_tab_products") 
+							h3 Товары
+						.catalog_tab.active(id="catalog_tab_collections") 
+							h3 Коллекции
+					.catalog_sort
+						a.gray_button.modal_call(href="#filter_show") Фильтры 
+							img(src='img/levels.svg')
+						.catalog_select
+							span.selected По популярности
+							ul(id="catalog_select")
+								li(data-value="popularity") по популярности
+								li(data-value="price-asc") По цене сначала дешевле
+								li(data-value="price-desc") По цене сначала дороже
+				.catalog_active_filters
+					div Наличие: 351
+					ul  
+						li Производитель: Axima
+						li Производитель: PiezaROSA
+						li Размер: 120x60 см
+						li Цвет: серый  
+						li Цвет: белый
+					span.clear(id="clear_catalog_filter_more")  Очистить все
+				.catalog_poducts_list.collections_list
+					
+					- var n = 16;
+						each _, index in Array(n)
+							a.product-card(href="#")
+								.product-card-image_slider(data_tab_sales="")
+									.tabs_images_block
+											img.product-card__image(src="img/product_01.png", alt='title')
+											img.product-card__image(src="img/product_02.png", alt='')
+											img.product-card__image(src="img/product_03.png", alt='')
+											img.product-card__image(src="img/product_04.png", alt='')
+											.product-card_hover_tabs
+								
+									span.product-card__badge Хит продаж
+								.product-card__info
+									span.product-card__art 56967
+									.product-card__title(href="#") Керамогранит Barcelona светло-серая 600×600
+									.product-card__stock В наличии:&nbsp;
+										span 150 шт./150 м<sup>2</sup>
+									.product-card__price
+										.product-card__price-current 1 723 <span>₽/м<sup>2</sup></span>
+										.product-card__price-old 2 150 <span>₽/м<sup>2</sup></span>
+										p Розничная цена
+									.product-card__price.wholesale_price
+										.product-card__price-current 1 523 <span>₽/м<sup>2</sup></span>
+										.product-card__price-old 1 723 <span>₽/м<sup>2</sup></span>
+										.product-card__discount -20%
+										p Оптовая цена
+								.product-card__bottom-block
+									.product-card__red_button.red_button(data-incart="") В корзину
+									.product-card__compare_button(data-compare="")
+										img(src="./img/icons/line_desc.svg", alt="")
+									.product-card__like_button(data-like="")
+										img(src="./img/icons/heart_desc.svg", alt="")
+							
+						
+
+
+														
+				.catalog_show_more.gray_button Показать ещё
+				.catalog_pagination_bottom 
+					.catalog_pre_arrow_pagination(style="background-image: url('img/Arrow3.svg');") 
+					ul  
+						li.active 1
+						li 2
+						li 3
+						li 4
+						li 5
+						li 6
+						li ...
+					.catalog_next_arrow_pagination(style="background-image: url('img/Arrow3.svg');") 
+				
+				.manufacturer 
+						h1 Популярные бренды
+						//- p Как принято считать, базовые сценарии поведения пользователей набирают популярность среди определенных слоев населения.
+						.swiper.main_manufacturer_slider
+							.swiper-wrapper
+								.swiper-slide.manufacturer_slide(style="background-image: url('img/01_manufacturer.png');")
+								.swiper-slide.manufacturer_slide(style="background-image: url('img/02_manufacturer.png');")
+								.swiper-slide.manufacturer_slide(style="background-image: url('img/03_manufacturer.png');")
+								.swiper-slide.manufacturer_slide(style="background-image: url('img/04_manufacturer.png');")
+								.swiper-slide.manufacturer_slide(style="background-image: url('img/05_manufacturer.png');")
+								.swiper-slide.manufacturer_slide(style="background-image: url('img/06_manufacturer.png');")
+				sectoin.bottom_seo 
+					.bottom_seo_item
+						h2 Текст для СЕО
+						p В частности, начало повседневной работы по формированию позиции способствует подготовке и реализации стандартных подходов. Принимая во внимание показатели успешности, укрепление и развитие внутренней структуры не даёт нам иного выбора, кроме определения укрепления моральных ценностей. Имеется спорная точка зрения, гласящая примерно следующее: независимые государства формируют глобальную экономическую сеть и при этом — объявлены нарушающими общечеловеческие нормы этики и морали. 
+					.bottom_seo_item
+						h3 Текст для СЕО
+						p Есть над чем задуматься: интерактивные прототипы, вне зависимости от их уровня, должны быть подвергнуты целой серии независимых исследований! Есть над чем задуматься: ключевые особенности структуры проекта призывают нас к новым свершениям, которые, в свою очередь, должны быть объективно рассмотрены соответствующими инстанциями. Как уже неоднократно упомянуто, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, описаны максимально подробно. Наше дело не так однозначно, как может показаться: синтетическое тестирование, в своём классическом представлении, допускает внедрение инновационных методов управления процессами. Кстати, реплицированные с зарубежных источников, современные исследования неоднозначны и будут описаны максимально подробно.
+						ul 
+							li Однозначно, реплицированные с зарубежных источников, современные исследования, вне зависимости от их уровня, должны быть обнародованы.
+							li Не следует, однако, забывать, что убеждённость некоторых оппонентов, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества. Картельные сговоры не допускают ситуации, при которой активно развивающиеся страны третьего мира призывают нас к новым свершениям, которые, в свою очередь, должны быть призваны к ответу
+							li Для современного мира дальнейшее развитие различных форм деятельности играет важную роль в формировании переосмысления внешнеэкономических политик
+						p Мы вынуждены отталкиваться от того, что высокое качество позиционных исследований однозначно фиксирует необходимость экспериментов, поражающих по своей масштабности и грандиозности. Противоположная точка зрения подразумевает, что явные признаки победы институционализации представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть объединены в целые кластеры себе подобных. Современные технологии достигли такого уровня, что понимание сути ресурсосберегающих технологий прекрасно подходит для реализации анализа существующих паттернов поведения.
+

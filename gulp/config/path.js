@@ -20,7 +20,7 @@ export const path = {
 		scss: `${srcFolder}/scss/**/*.scss`,
 		// js: `${srcFolder}/js/news.js`,
 		js: `${srcFolder}/js/app.js`,
-		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,ico}`,
 		svg: `${srcFolder}/img/**/*.svg`,
 		svgicons: `${srcFolder}/svgicons/*.svg`,
 		pug: `${srcFolder}/pug/pages/*.pug`,
@@ -29,11 +29,11 @@ export const path = {
 	},
     watch: {
 		html: `${srcFolder}/**/*.html`,
-		scss: `${srcFolder}/scss/**/*.scss`,
+		scss: [`${srcFolder}/scss/**/*.scss`, `${srcFolder}/blocks/**/*.scss`],
 		// scss: `${srcFolder}/sass/**/*.sass`,
-		js: `${srcFolder}/js/**/*.js`,
+		js: [`${srcFolder}/js/**/*.js`, `${srcFolder}/blocks/**/*.js`],
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
-		pug: `${srcFolder}/**/*.pug`,
+		pug: [`${srcFolder}/**/*.pug`, `${srcFolder}/blocks/**/*.pug`],
 		svg: `${srcFolder}/svgicons/**/*.svg`,
 		files: `${srcFolder}/assets/js/*.*`,
 		vendor: `${srcFolder}/assets/css/*.{scss,css}`

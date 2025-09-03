@@ -2,12 +2,8 @@ extends ../layouts/default
 
 prepend vars
 
-block content
-	include ../section/header/header
-	main.main
-		include ../components/breadcrumbs
-		include ../section/ready_made
-		
-		
-	include ../components/modals/modals
-	include ../section/footer/footer
+block content 
+	include @sections/header/header
+	main
+		include @sections/ready_made_page/ready_made_page
+	include @sections/footer/footer
