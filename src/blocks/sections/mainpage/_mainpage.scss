@@ -205,6 +205,7 @@
 	}
 }
 .main_catalog_item {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	// background-position: center;
@@ -212,17 +213,104 @@
 	justify-content: space-between;
 	width: 283px;
 	height: 230px;  
-	padding: 20px;
+	padding: 20px 0px 0px 20px;
+	background-color: #F2EFEC;
+	border-radius: 8px;
+	overflow: hidden;
 
 	@media (max-width:768px) {
-		padding: 11px;	
+		padding: 11px 0px 0px 11px;
 		width: 160px;
 		height: 130px; 
+		flex: calc(50% - 20px);
 	}
 
-	p {
+	p {	z-index: 2;
 		font-weight: 600;
 		font-size: 20px;
+		@media (max-width:768px) {
+			font-size: 12px;
+		}
+	}
+}
+.main_catalog_item span {
+	transition: .3s ease-in-out;
+	position: absolute;
+	z-index: 0;
+	background-color: #E2DDD9;
+}
+
+.main_catalog_item:nth-of-type(1) span:nth-of-type(1){ 
+	width: 241px;
+	height: 241px;
+	border-radius: 500px;
+	bottom: -50px;
+	right: -56px;
+}
+.main_catalog_item:nth-of-type(2) span:nth-of-type(1){ 
+	width: 124px;
+	height: 124px;
+	border-radius: 124px;
+	top: -65px;
+	right: -20px;
+}
+.main_catalog_item:nth-of-type(2) span:nth-of-type(2){ 
+	width: 241px;
+	height: 241px;
+	border-radius: 241px;
+	bottom: -79px;
+	right: -15px;
+}
+.main_catalog_item:nth-of-type(3) span:nth-of-type(1){ 
+	width: 214px;
+	height: 214px;
+	border-radius: 214px;
+	top: -65px;
+	right: -26px;
+}
+.main_catalog_item:nth-of-type(3) span:nth-of-type(2){ 
+	width: 108px;
+	height: 108px;
+	border-radius: 108px;
+	bottom: -66px;
+	right: 91px;
+}
+.main_catalog_item:nth-of-type(4) span:nth-of-type(1){ 
+	width: 177px;
+	height: 177px;
+	border-radius: 177px;
+	top: 11px;
+	right: 53px;
+}
+
+.main_catalog_item:hover span {
+	width: 200% !important;
+	height: 200% !important;
+	border-radius: 0px !important;
+
+}
+.main_catalog_item:hover span:nth-of-type(1) {
+	width: 200% !important;
+	height: 200% !important;
+	border-radius: 555px !important;
+	top: -100px;
+	right: -100px;
+
+}
+.main_catalog_bottom {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: flex-end;
+	z-index: 2;
+}
+.main_catalog_bottom__img {
+	width: 186px;
+	height: 166px;
+	background-size: contain;
+	@media (max-width:768px) {
+		width: 106px;
+		height: 94px; 
 	}
 }
 .main_catalog_arrow {
@@ -233,6 +321,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 20px;
 	
 	svg {
 		width: 19px;
@@ -310,6 +399,7 @@
 	top: 50%;
 	margin-top: -28px;
 	transform: rotate(180deg);
+	display: none;
 
 	svg {
 		width: 19px;
@@ -344,6 +434,7 @@
 	top: 50%;
 	margin-top: -28px;
 	z-index: 3;
+	display: none;
 
 	svg {
 		width: 19px;

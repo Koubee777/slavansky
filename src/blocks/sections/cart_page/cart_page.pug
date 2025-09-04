@@ -99,9 +99,35 @@ section.cart
 							.cart_order__item--radio  
 								input(type="radio" name="delivery" id="delivery2")
 								label(for="delivery2") Самовывоз
-					.cart_order__item 
+
+
+					.cart_order__item.cart_order__item--hidden(data-delivery="delivery2")
 						.cart_order__item--info
-							.cart_order__item--title Ваши данные
+							.cart_order__item--title Выберите пункт выдачи
+						.cart_order__item--radios
+							.cart_order__item--radio 
+								input(type="radio" name="pointget" id="pointget1" checked)
+								label(for="pointget1") 
+									.cart_order__item--radio--point
+										p г. Славянск-на-Кубани, ул. Пролетарская 7
+										p Режим работы:
+										p
+											span С 25 июля
+											span Бесплатно
+							.cart_order__item--radio  
+								input(type="radio" name="pointget" id="pointget2")
+								label(for="pointget2")
+									.cart_order__item--radio--point
+										p г. Краснодар
+										p Режим работы:
+										p
+											span С 25 июля
+											span Бесплатно
+
+
+					.cart_order__item.cart_order__item--hidden.cart_order__item--active(data-delivery="delivery1") 
+						.cart_order__item--info
+							.cart_order__item--title Адрес доставки
 							.cart_order__item--text Стоимость и дату доставки уточнит менеджер после оформления заказа
 						.cart_order__item--form
 							.cart_order__item--form

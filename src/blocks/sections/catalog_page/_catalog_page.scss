@@ -16,7 +16,7 @@
 	margin-bottom: 60px;
 }
 .bottom_seo_item  {
-	h3, p, ul {
+	h2, h3, p, ul {
 		margin-bottom: 30px;
 	}
 
@@ -358,7 +358,30 @@
 }
 
 
+.catalog_products {
+	.manufacturer {
+		padding-top: 120px;
+		h1 {
+			margin-bottom: 30px;
+		}
+	}
+	.main_manufacturer_slider {
+		padding-bottom: 120px;
+		.manufacturer_slider-next {
+			display: flex;
+			top: auto;
+			bottom: 34px;
+			left: calc(50% - 40px);
+		}
+		.manufacturer_slider-prev {
+			display: flex;
+			top: auto;
+			bottom: 34px;
+			left: calc(50% + 40px);
 
+		}
+	}
+}
 .catalog_result {
 	.main_manufacturer_slider {
 		margin-top: 30px;

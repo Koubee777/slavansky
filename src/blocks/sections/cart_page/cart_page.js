@@ -36,4 +36,13 @@ const cartBackBtn = document.querySelector('.cart_back');
 cartBackBtn && cartBackBtn.addEventListener('click', function() {
 	firstScreen.classList.add('active');
 	secondScreen.classList.remove('active');
-})
+})	
+
+document.addEventListener("change", (e) => {
+	if (e.target.name === "delivery") {
+	  document.querySelectorAll("[data-delivery]").forEach(el =>
+		el.classList.toggle("cart_order__item--active", el.dataset.delivery === e.target.id)
+	  );
+	}
+  });
+    document.querySelector('input[name="delivery"]:checked')?.dispatchEvent(new Event("change"));

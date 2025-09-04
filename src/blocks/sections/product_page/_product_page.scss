@@ -165,10 +165,12 @@
 			&--reviews {
 				display: flex;
 				gap: 10px;
+				margin-bottom: 8px;
 
 				&--stars {
 					display: flex;
 					gap: 3px;
+					margin-right: 10px;
 				}
 
 				a {
