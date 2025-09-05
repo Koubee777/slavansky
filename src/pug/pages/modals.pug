@@ -17,8 +17,25 @@ block content
 				a(href="#thansk-response" ).modal_call.red_button Спасибо за отклик
 				a(href="#thansk-bid").modal_call.red_button Спасибо за заявку
 				a(href="#thansk-bid2" ).modal_call.red_button Спасибо за заявку
+				a(href="#get-callback" ).modal_call.red_button Заказать обратный звонок
+				a(href="#get-actual-price" ).modal_call.red_button Уточнить стоимость доставки
+				a(href="#we-are-get-mail" ).modal_call.red_button Мы получили ваше сообщение
+				a(href="#you-order-ready" ).modal_call.red_button Ваш заказ успешно оформлен
+				a(href="#delete-product-out-catrt" ).modal_call.red_button Удалить выбранные товары из корзины?
+				a(href="#lk-fiz-rename-name" ).modal_call.red_button Физ - лицо Изменить имя
+				a(href="#lk-fiz-rename-phone").modal_call.red_button Физ - лицо Изменить телефон
+				a(href="#lk-fiz-rename-email").modal_call.red_button Физ - лицо Изменить email
+				a(href="#lk-fiz-rename-inn").modal_call.red_button Физ - лицо Изменить ИНН
 
-			
+				a(href="#lk-ur-rename-urname").modal_call.red_button Юр - лицо Изменить название организации
+				a(href="#lk-ur-rename-inn").modal_call.red_button Юр - лицо Изменить ИНН
+				a(href="#lk-ur-rename-uraddres").modal_call.red_button Юр - лицо Изменить юридический адрес
+				a(href="#lk-ur-rename-phone").modal_call.red_button Юр - лицо Изменить телефон
+				a(href="#lk-ur-rename-email").modal_call.red_button Юр - лицо Изменить e-mail
+
+
+
+
 
 
 
@@ -37,8 +54,6 @@ block content
 						.modal_content--list--item--img
 					button.red_button(type="submit") Отправить
 					.modal_close
-			
-
 
 			
 			.modal(id="thansk-for-get-project") 
@@ -46,10 +61,6 @@ block content
 					.modal_content__title Спасибо за заявку
 					div Наш дизайнер свяжется с вами в ближайшее время для обсуждения деталей проекта.
 					.modal_close
-
-
-
-
 
 
 			.modal(id="sing-in") 
@@ -139,23 +150,135 @@ block content
 					div Мы ценим ваше мнение и разместим ваш отзыв после его проверки модератором.
 					.modal_close
 			
-			modal(id="thansk-response") 
+			.modal(id="thansk-response") 
 				.modal_content
 					.modal_content__title Спасибо за отклик
 					div Наш специалист изучит вашу анкету и свяжется в вами.
 					.modal_close
 			
-			modal(id="thansk-bid") 
+			.modal(id="thansk-bid") 
 				.modal_content
 					.modal_content__title Спасибо за заявку
 					div Наши специалисты свяжутся с вами в ближайшее время, чтобы обсудить условия выгодного сотрудничества.
 					.modal_close
-			
-			modal(id="thansk-bid2") 
+
+			.modal(id="thansk-bid2") 
 				.modal_content
 					.modal_content__title Спасибо за заявку
 					div Наш менеджер свяжется с вами в ближайшее время.
 					.modal_close
 
+			.modal(id="get-callback") 
+				form.modal_content
+					.modal_content__title Заказать обратный звонок
+					input(type="text", name="name" placeholder="ФИО" required)
+					input(type="text", name="phone" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _" required)
+					p.modal_content__hidden Заполните обязательные поля
+					.modal_content--list--item 
+						.modal_content--list--item--checkbox
+							input(type='checkbox' id='order-project' name='order-project' required)
+							label(for='order-project')
+							a(href="") Я даю согласие на обработку своих перс ональных данных
+						.modal_content--list--item--img
+					button.red_button(type="submit") Отправить
+					.modal_close
+
+			.modal(id="get-actual-price") 
+				form.modal_content
+					.modal_content__title Уточнить стоимость доставки
+					input(type="text", name="name" placeholder="ФИО" required)
+					input(type="text", name="phone" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _" required)
+					p.modal_content__hidden Заполните обязательные поля
+					.modal_content--list--item 
+						.modal_content--list--item--checkbox
+							input(type='checkbox' id='order-project' name='order-project' required)
+							label(for='order-project')
+							a(href="") Я даю согласие на обработку своих перс ональных данных
+						.modal_content--list--item--img
+					button.red_button(type="submit") Отправить
+					.modal_close
+			.modal(id="we-are-get-mail") 
+				.modal_content
+					.modal_content__title Мы получили ваше сообщение
+					div Наши специалисты свяжутся с вами в ближайшее время.
+					.modal_close
+			.modal(id="you-order-ready") 
+				.modal_content
+					.modal_content__title Ваш заказ успешно оформлен
+					div Наши специалисты свяжутся с вами в ближайшее время, чтобы подтвердить заказ.
+					.modal_close
+
+			.modal(id="delete-product-out-catrt") 
+				form.modal_content
+					.modal_content__title Удалить выбранные товары из корзины?
+					.modal_content__delete
+						button.red_button(type="submit" value="1") Да, удалить
+						.modal_close
+						.gray_button.no_close(type="submit" value="0") Нет, отменить
+
+
+			.modal(id="lk-fiz-rename-name") 
+				form.modal_content
+					.modal_content__title Изменить имя
+					input(type="text", name="name" placeholder="ФИО" required)
+					button.red_button(type="submit") Сохранить
+					.modal_close
+
+			.modal(id="lk-fiz-rename-phone") 
+				form.modal_content
+					.modal_content__title Изменить телефон
+					input(type="text", name="phone" placeholder="Телефон" required)
+					button.red_button(type="submit") Сохранить
+					.modal_close
+
+			.modal(id="lk-fiz-rename-email") 
+				form.modal_content
+					.modal_content__title Изменить Email
+					input(type="text", name="email" placeholder="Email" required)
+					button.red_button(type="submit") Сохранить
+					.modal_close
+
+			.modal(id="lk-fiz-rename-inn") 
+				form.modal_content
+					.modal_content__title Изменить ИНН
+					input(type="text", name="inn" placeholder="ИНН" required)
+					button.red_button(type="submit") Сохранить
+					.modal_close
+
+
+			.modal(id="lk-ur-rename-urname") 
+				form.modal_content
+					.modal_content__title Название организации
+					input(type="text", name="urname" placeholder="Название организации" required)
+					button.red_button(type="submit") Сохранить
+					.modal_close
+
+			.modal(id="lk-ur-rename-inn") 
+				form.modal_content
+					.modal_content__title ИНН
+					input(type="text", name="inn" placeholder="ИНН" required)
+					button.red_button(type="submit") Сохранить
+					.modal_close
+
+			.modal(id="lk-ur-rename-uraddres") 
+				form.modal_content
+					.modal_content__title Юридический адрес
+					input(type="text", name="uraddres" placeholder="Юридический адрес" required)
+					button.red_button(type="submit") Сохранить
+					.modal_close
+
+			.modal(id="lk-ur-rename-phone") 
+				form.modal_content
+					.modal_content__title Телефон
+					input(type="text", name="phone" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _" required)
+					button.red_button(type="submit") Сохранить
+					.modal_close
+
+			.modal(id="lk-ur-rename-email") 
+				form.modal_content
+					.modal_content__title E-mail
+					input(type="text", name="email" placeholder="E-mail" required)
+					button.red_button(type="submit") Сохранить
+					.modal_close
 
 	include @sections/footer/footer

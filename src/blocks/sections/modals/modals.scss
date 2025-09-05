@@ -291,6 +291,21 @@
             display: none;
         }
     }
+    
+}
+.modal_content__delete {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    .red_button {
+        width: calc(50% - 20px);
+    }
+    .gray_button {
+        width: calc(50% - 20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 #rewew-no_auth {
     a {

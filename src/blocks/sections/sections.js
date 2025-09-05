@@ -18,7 +18,10 @@ safeRun(".modal", modal => {
   modal.addEventListener("click", e => {
 	if (
 	  e.target.classList.contains("modal") ||
-	  e.target.classList.contains("modal_close")
+	  e.target.classList.contains("modal_close") ||
+	  e.target.classList.contains("no_close")
+
+	  
 	) {
 	  modal.classList.remove("active");
 	}
