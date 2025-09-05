@@ -409,3 +409,4 @@ for (i = 0; i < phoneInputs.length; i++) {
 @@include("./partners_page/partners_page.js")
 @@include("./cart_page/cart_page.js")
 @@include("./ready_made_page_in/ready_made_page_in.js")
+@@include("./modals/modals_page.js")

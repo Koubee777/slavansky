@@ -5,8 +5,131 @@ prepend vars
 block content 
 	include @sections/header/header
 	main
-		.container 
-			h1 Модалки
-			a(href="" data-dasdasdasdkasd).modal_button Форма 1
-			a(href="" data-dasdasdasdkasd).modal_button Окно спасибо
+		.container.modals
+			.modals_button
+				h1 Модалки
+				a(href="#get-project" ).modal_call.red_button Заказать свой проект
+				a(href="#thansk-for-get-project" ).modal_call.red_button Спасибо за заявку
+				a(href="#sing-in" ).modal_call.red_button Войти Зарегестироваться
+				a(href="#subsr" ).modal_call.red_button Подписаться на рассылку
+				a(href="#rewew-no_auth" ).modal_call.red_button Оставить отзыв не авторизован
+				a(href="#thansk-rewew" ).modal_call.red_button спасибо за отзыв
+			
+
+
+
+			.modal(id="get-project") 
+				form.modal_content
+					.modal_content__title Заказать свой проект
+					input(type="text", name="name" placeholder="ФИО" required)
+					input(type="text", name="phone" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _" required)
+					input(type="text", name="order_text" placeholder="Что вы хотите видеть в проекте" required)
+					.modal_content--list--item 
+						.modal_content--list--item--checkbox
+							input(type='checkbox' id='order-project' name='order-project' required)
+							label(for='order-project')
+							a(href="") Я даю согласие на обработку своих персональных данных
+						.modal_content--list--item--img
+					button.red_button(type="submit") Отправить
+					.modal_close
+			
+
+
+			
+			.modal(id="thansk-for-get-project") 
+				.modal_content
+					.modal_content__title Спасибо за заявку
+					div Наш дизайнер свяжется с вами в ближайшее время для обсуждения деталей проекта.
+					.modal_close
+
+
+
+
+
+
+			.modal(id="sing-in") 
+				.modal_content
+					.modal_content__tabs
+						.modal_content__tabs--tab(data-active-modal-inner="1").active Войти
+						.modal_content__tabs--tab(data-active-modal-inner="2") Зарегистрироваться
+					
+					
+					form.modal_content__inner.active(id="modal_inner_1")
+						input(type="text", name="email" placeholder="E-mail" required)
+						input(type="text", name="password" placeholder="Пароль" required)
+						button.red_button(type="submit") Войти
+						.modal_content__up__password Забыли пароль?
+					
+					
+					.modal_content__inner(id="modal_inner_2")
+						
+						.modal_content__inner--tabs
+							.modal_content__inner--tabs--tab.active(data-tab="fiz") Физ. лицо
+								//- +svg('man')
+							.modal_content__inner--tabs--tab(data-tab="ur") Юр. лицо
+								//- +svg('man2')
+						
+						form.modal_content__inner--client.active(data-tab="fiz1")
+							input(type="text", name="name" placeholder="ФИО" required)
+							input(type="text", name="phone" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _" required)
+							input(type="text", name="email" placeholder="E-mail" required)
+							input(type="text", name="password" placeholder="Пароль" required)
+							input(type="text", name="repeat-password" placeholder="Подтвердить пароль" required)
+							.modal_content__inner--list--item 
+								.modal_content__inner--list--item--checkbox
+									input(type='checkbox' id='fiz-politic' name='fiz-politic' required)
+									label(for='fiz-politic') 
+									a(href="") Я даю согласие на обработку своих персональных данных
+								.modal_content__inner--list--item--img
+							button.red_button(type="submit") Отправить
+
+
+						form.modal_content__inner--client(data-tab="ur1")
+							.opt_client.filter_section.filter_special
+								input(type='checkbox' id='opt' name='special-filter').hidden
+								label(for='opt') 
+									.filter_special__title Оптовый клиент
+									.in-stock_radio
+										span
+							input(type="text", name="urname" placeholder="Название организации" required)
+							input(type="text", name="inn" placeholder="ИНН" required)
+							input(type="text", name="uraddres" placeholder="Юридический адрес" required)
+							input(type="text", name="phone" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _" required)
+							input(type="text", name="email" placeholder="E-mail" required)
+							input(type="text", name="password" placeholder="Пароль" required)
+							input(type="text", name="repeat-password" placeholder="Подтвердить пароль" required)
+							.modal_content__inner--list--item 
+								.modal_content__inner--list--item--checkbox
+									input(type='checkbox' id='ur-politic' name='ur-politic' required)
+									label(for='ur-politic') 
+									a(href="") Я даю согласие на обработку своих персональных данных
+								.modal_content__inner--list--item--img
+							button.red_button(type="submit") Отправить
+					.modal_close
+
+
+			.modal(id="subsr") 
+				.modal_content
+					.modal_content__title Вы успешно подписались на рассылку
+					div Теперь вы не пропустите самые выгодны предложения от компании Славянский Дворъ
+					.modal_close
+
+			.modal(id="rewew-no_auth") 
+				.modal_content
+					.modal_content__title Оставить отзыв
+					div
+						a(href="#sing-in" ) Войти 
+						span или 
+						a(href="#sing-in" ) зарегистрироваться
+						span , чтобы оставить отзыв о товаре.
+					.modal_close
+
+			.modal(id="thansk-rewew") 
+				.modal_content
+					.modal_content__title Спасибо за отзыв
+					div Мы ценим ваше мнение и разместим ваш отзыв после его проверки модератором.
+					.modal_close
+
+
+
 	include @sections/footer/footer

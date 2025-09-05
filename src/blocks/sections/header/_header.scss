@@ -1,7 +1,6 @@
 header {
 
 	.header {
-		
 		&_top {
 			background-color: #E2DDD9;
 			padding: 12px 0;
@@ -182,6 +181,9 @@ header {
 			gap: 30px;
 			justify-content: space-between;
 			align-items: center;
+			.container {
+				margin-bottom: 40px;
+			}
 
 			&__btn {
 				background-color: $red;
