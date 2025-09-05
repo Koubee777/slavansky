@@ -24,6 +24,7 @@ block content
 					input(type="text", name="name" placeholder="ФИО" required)
 					input(type="text", name="phone" placeholder="+7 ( _ _ _ ) - _ _ _ - _ _ - _ _" required)
 					input(type="text", name="order_text" placeholder="Что вы хотите видеть в проекте" required)
+					p.modal_content__hidden Заполните обязательные поля
 					.modal_content--list--item 
 						.modal_content--list--item--checkbox
 							input(type='checkbox' id='order-project' name='order-project' required)
@@ -57,6 +58,7 @@ block content
 					form.modal_content__inner.active(id="modal_inner_1")
 						input(type="text", name="email" placeholder="E-mail" required)
 						input(type="text", name="password" placeholder="Пароль" required)
+						p.modal_content__hidden Заполните обязательные поля
 						button.red_button(type="submit") Войти
 						.modal_content__up__password Забыли пароль?
 					
@@ -75,6 +77,8 @@ block content
 							input(type="text", name="email" placeholder="E-mail" required)
 							input(type="text", name="password" placeholder="Пароль" required)
 							input(type="text", name="repeat-password" placeholder="Подтвердить пароль" required)
+							p.modal_content__hidden Заполните обязательные поля
+
 							.modal_content__inner--list--item 
 								.modal_content__inner--list--item--checkbox
 									input(type='checkbox' id='fiz-politic' name='fiz-politic' required)
@@ -98,6 +102,7 @@ block content
 							input(type="text", name="email" placeholder="E-mail" required)
 							input(type="text", name="password" placeholder="Пароль" required)
 							input(type="text", name="repeat-password" placeholder="Подтвердить пароль" required)
+							p.modal_content__hidden Заполните обязательные поля
 							.modal_content__inner--list--item 
 								.modal_content__inner--list--item--checkbox
 									input(type='checkbox' id='ur-politic' name='ur-politic' required)
